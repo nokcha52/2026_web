@@ -14,7 +14,7 @@ body{
     /*
         background-size : [width] [height];
         ? background-size = 입력안했을 때 본래 image크기로 적용됨.
-        * 1. background-size는 고정단위 px 보다는 상대단위 % 사용. 화면및공간에 적응성향상(adaptive)
+        * 1. background-size는 고정단위 px 보다는 상대단위 % 사용. 화면 및 공간에 적응성향상(adaptive)
         * 2. % = 기존 img Tag와 같은 방식. 종횡비를 따름. (ex> 너비가 변경되면 비율대로 높이도 변경)
         * 3. preset : 
             cover : 무조건 꽉 채움 = 지정 공간보다 이미지가 크다. + 위치(position) = 배경초첨(focus) 사진에서 원하는 부분만을 사용하고 싶을 때 사용.

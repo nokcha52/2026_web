@@ -35,7 +35,7 @@ ex > ol li {list-style: none;} (x) -> ol{list-style: none;} (o)
 */
 
 ul.custom {
-    list-style-image:url('../images/bul_li.gif') ;
+    list-style-image: url('../images/bul_li.gif') ;
     list-style-position: outside;
 
     /* 
