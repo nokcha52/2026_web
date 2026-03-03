@@ -35,12 +35,16 @@ ex > ol li {list-style: none;} (x) -> ol{list-style: none;} (o)
 */
 
 ul.custom {
-    list-style-image: url('../images/bul_li.gif') ;
-    list-style-position: outside;
+    list-style: none;
+    /* list-style-image: url('../images/bul_li.gif') ;
+    list-style-position: outside; */
 
     /* 
         ? custom bullet 사용방법
         ? =position : 기본 outside /depth 필요시 inside
         ! 위의 코드들보다 background 운영이 훨씬 편함.
     */
+}
+ul.custom li {
+    background-image: url(../images/bul_li.gif);
 }
