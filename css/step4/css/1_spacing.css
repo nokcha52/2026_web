@@ -1,0 +1,55 @@
+body,p {
+    /* 기본마진 : 8px */
+    margin: 0;
+}
+.firstDiv {
+    /* margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px; */
+    margin: 30px;
+    /* !borderShortHand(줄여쓰기)와 마찬가지로 방향별 처리가 동일함.*/
+    background-color: #555;
+}
+.firstDiv p{
+    background-color: #039;
+    color: white;
+    /* margin: 50px 0; */
+    /* 
+        ! 자손의 margin으로 부모를 밀어내서는 안됨.
+        ? margin ? -> 형제 관계들끼리 서로 간격을 남기다(벌리다)
+    */
+}
+.secondDiv {
+    background-color: #ddd;
+    margin: 20px;
+    /* 
+        ! margin은 방향성에 유의해야한다.
+        ? firstDiv에서는 하단으로 30px을 밀고 있고 secondDiv에서는 상단으로 20px을 밀고 있지만
+        결과는 50px이 아니라 30px이다.
+        ? 같은 방향에서 충돌하면 상쇄되기 때문에.
+        todo. margin 상,하에선 하단으로만 좌,우에선 좌측으로만 = 되도록이면..
+    */    
+}
+.centerDiv {
+    width: 300px;
+    border: 1px solid #33f;
+    text-align: center;
+    /*  ? 단순 글자만 정렬하는 것이 아닌 inline or inline-block tag's 역시 적용대상이 됨 */
+    margin: 0 auto;
+    /* 
+        ? margin : 0 auto = 공간 중앙 = 배치되어야하는 공간 너비보다 적용 대상 너비가 작어야 가능.
+        * 적용 수식: (배치공간너비 - 적용대상너비)/2 =좌우에 분배 
+    */
+    padding: 10px;
+    /* 
+        ? padding = 부모가 주는 안쪽 여백
+        ! 너비나 높이에 가산됨 = border도 마찬가지, margin과 만나면 증산되니까 자손이 부모대상으로 margin 사용하면 안됨.
+    */
+}
+.centerDiv p {
+    background-color: #f33;
+    color: white;
+    margin: 0 10px;
+    /* ! 부모를 밀어내는 잘못된 margin */
+}

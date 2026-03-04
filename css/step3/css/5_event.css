@@ -42,7 +42,7 @@ a:active {
 a:focus {
     background-color: cyan;
     /* 
-        초점 대상이 되었을 때 /test 는 tab과 shift tab으로..
+        초점 대상이 되었을 때 /test는 tab과 shift tab으로..
         ! click이 아니다. 대용 금지
     */
 }
