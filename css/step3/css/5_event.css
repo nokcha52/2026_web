@@ -29,7 +29,7 @@ a:hover {
     *모든 Tag에 마우스 커서가 올라간 상태 감지
     ? 1. 쇼핑몰 카드 슬롯에 커서 올렸을 때 add to cart 버튼이 등장 or 이미지가 변경 되거나 등
     ? 2. 버튼 이벤트 -> 커서를 올렸을 때 배경이 사라지거나 or 나타나거나 or 도형이 그려지거나..등
-    ? 3. gnb 이벤트 -> depth(중첩)메뉴 1depth 메뉴에 커서를 올렸을 때 2depth 메뉴가 나오거나
+    ? 3. gnb(global navigation bar) 이벤트 -> depth(중첩)메뉴 1depth 메뉴에 커서를 올렸을 때 2depth 메뉴가 나오거나
     ! hover -> mouseCursor 인식이지만 touchPad로 넘어가면 touchEvent로 자동 변경됨
 */
 a:active {
