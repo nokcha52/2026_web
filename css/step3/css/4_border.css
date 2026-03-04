@@ -97,5 +97,5 @@ div {
     font-size: 2vw;
     line-height: 50vw;
     text-align: center;
-    /* vw : viewprtWidth 약자 -> 브라우저 너비를 기준으로 백분지수화하여 1vw 기준 성립. (ex> 1920 -> 1vw : 19.2px */
+    /* vw : viewportWidth 약자 -> 브라우저 너비를 기준으로 백분지수화하여 1vw 기준 성립. (ex> 1920 -> 1vw : 19.2px */
 }
