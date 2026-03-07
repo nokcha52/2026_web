@@ -31,7 +31,7 @@
     ! 적용대상 - float들의 부모에게.
     * float를 끊어내는 용도 -> clear = floatCounter(중단시키는 속성 or 값)
     1. after - 후위 선택자
-    2. content - html에 없는 content를 넣어주는 속성 (ex> 1입력 -> 1이 들어감, url(); 입력 -> 대상 들어감
+    2. content - html에 없는 content를 넣어주는 속성 (ex> 1입력 -> 1이 들어감, url(); 입력 -> 대상 들어감)
     3. display : block - width 100%
     4. clear:both = float 양쪽값(left,right)다
 */
