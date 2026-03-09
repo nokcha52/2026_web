@@ -90,18 +90,23 @@ a {
 }
 .wrap section article{
     float: left;
-    width: 320px;
-    background-color: #f5bf4c;
+    width: 33.3%;
+}
+.wrap section article ul{
+    list-style-position: inside;
+    padding-left: 20px;
 }
 .wrap section article h3,
 .wrap section article ul li{
     text-align: center;
 } 
 .wrap section article h3{
-    line-height: 55px;
+    line-height: 35px;
+    color: lightpink;
+    background-color: rgba(0,0,0,0.5);
 }
 .wrap section article ul li {
-    line-height: 40px;
+    line-height:36px;
 }
 .wrap footer {
     background-color: rgba(50,0,255,0.8);
