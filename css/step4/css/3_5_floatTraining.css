@@ -1,0 +1,55 @@
+/* body{
+    margin: 0;
+}
+.wrap {
+    margin: 0 auto;
+    width: 900px;
+}
+.wrap:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+div .imgBox {
+    float: left;
+    width: 16.6%;
+    background-color: yellow;
+    border: 1px solid #000;
+    box-sizing: border-box;
+}
+div .imgBox img{
+    display: block;
+    width: 100%;
+}
+div .imgBox h2,
+div .imgBox p{
+    font-size: 14px;
+    text-align: center;
+    margin: 0;    
+} */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+ul:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+ul li{
+    width: 16.6%;
+    float: left;
+    display: block;
+    border: 1px solid black;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: yellow;
+}
+ul li *{
+    display: block;
+}
+ul li img{
+    width: 100%;
+    display: block;
+}
