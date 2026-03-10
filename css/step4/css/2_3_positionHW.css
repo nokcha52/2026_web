@@ -4,30 +4,26 @@
     3. 정확하게 footer 높이 만큼만 화면 스크롤이 발생해야함.
 */
 /* ! 전체다 position만으로 만들어야 쉬움. float등이 섞이며 처리하기 복잡해짐. */
-* {
-    color: white;
-}
+
 body{     
-    position: relative;
-    width: 100%;
     margin: 0;    
     background-color: black;  
-    height: 1200px; 
 }
 header{
     position: fixed;
     background-color: red;
     width: 100%;
-    height: 100px;   
+    height: 20%;  
+    color: white; 
     top: 0;
-    left: 0;
-    z-index: 10;    
+    z-index: 1;    
 }
-aside, article {
+aside,article {
     position: absolute;
-    top: 100px;
-    height: 1200px;
-    
+    top: 20%;
+    height: 80%;    
+    font-weight: bold;
+    color: white;
 }
 aside{
     background-color: green;
@@ -36,14 +32,16 @@ aside{
 }
 article{
     background-color: blue;
-    width: 80%;
+    width: 70%;
     right: 0;
 }
 footer {
     background-color: yellow;
     position:absolute;
-    bottom: -100px;
+    top: 100%;
     left: 0;
     width: 100%;
-    height: 100px;
+    line-height: 55px;
+    font-size: 24px;
+    text-align: center;
 }
