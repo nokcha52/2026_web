@@ -1,0 +1,47 @@
+body{
+    margin: 0;
+}
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+ul li {
+    line-height: 60px;
+    text-align: center;
+}
+ul li:first-child{
+    width: 100%;
+    background-color: red;
+}
+ul li:nth-child(2),
+ul li:nth-child(3){
+    width: 50%;
+    background-color: blue;
+    color: white;
+    float: left;
+}
+ul li:nth-child(4),
+ul li:nth-child(5),
+ul li:nth-child(6){
+    width: 33.33%;
+    background-color: green;
+    float: left;
+}
+ul li:nth-child(7),
+ul li:nth-child(8),
+ul li:nth-child(9),
+ul li:nth-child(10){
+    width: 25%;
+    background-color: yellow;
+    float: left;
+}
+ul li:nth-child(11),
+ul li:nth-child(12),
+ul li:nth-child(13),
+ul li:nth-child(14),
+ul li:nth-child(15){
+    width: 20%;
+    background-color: pink;
+    float: left;
+}
