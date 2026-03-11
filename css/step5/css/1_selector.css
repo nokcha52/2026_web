@@ -66,3 +66,34 @@
     height: 25px;
     accent-color: black;
 }
+
+.directSelector > h1{
+    font-size: 28px;
+    color: #66f;
+}
+.directSelector >span {
+    font-size: 22px;
+    color: #906;
+    line-height: 40px;
+    /* 
+        ? a > b: 직계 선택자
+        1. a의 안에 직계 자손들만 선택할 수 있게 하는 선택자.
+        2. 내부로 css가 파고들지 못하게 막아주는 역할을 수행하는 중요 선택자.
+        !. a와 b가 같은 tag로 반복된다면 bubbling(연쇄적용)이 일어나기 때문에 다채로운 구조를 짜도록 해야된다.
+        ? 웹표준,웹접근성에 맞는 구조 = 다채로운 구조.
+        bubbleEffect(bubbling): html에서 같은 태그를 반복해서 사용하면 일어나는 현상.
+    */
+}
+.sameSelector h1~h2 {
+    background-color: #999;
+}
+.sameSelector h1+h2 {
+    font-size: 40px;
+    color: #fcf;
+}
+/* 
+    ? a~b, a+b : 동위 선택자.
+    1. a를 기준으로 형제관계들인 b를 선택하는 선택자
+    2. 내가 원하는대로 기준을 세우고 대상을 범위(~) 혹은 개별(+)로 선택할 수 있기 때문에 효율이 좋음.
+    ! ~은 범위지정이기 때문에 최초 기준이 되는 tag만 효력이 생긴다. 
+*/
