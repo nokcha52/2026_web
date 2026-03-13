@@ -278,6 +278,32 @@
  /* 
     덜 중요 - 첫줄이니까 <br>의 영향을 받는다.
     !responsive(반응형) 입장에서는 br은 쥐약.
-    ? 그렇기 때문에 br 말고 adaptive(적응형) 상태를 유지시켜놓으면 알아서 첫줄을 계속 선택해준다.
- 
+    ? 그렇기 때문에 br 말고 adaptive(적응형) 상태를 유지시켜놓으면 알아서 첫줄을 계속 선택해준다. 
  */
+.backandfrontSelector p{
+    counter-increment: rint;    
+}
+.backandfrontSelector p::before{
+    content: counter(rint) ".";
+}
+.backandfrontSelector p::after{
+    content: "-" attr(data-page) "page";
+    font-weight: bold;
+    color: deeppink;
+}
+/* 
+    ? "rint"(내가 지은 이름)라 부르기로 한 카운터 이름 생성
+    * counter()라는 함수: 지정된 이름들을 세어주는 것. (counter(지정된 이름)= 지정된 이름의 갯수)
+*/
+/* 
+    ? attr(): 지정된 attribute의 값을 가져오는 함수.
+    * ex> img의 src를 attr(src) 이런식응로 넣어주면 "httpsL//placehold/cd/150" 이런 값이 넘어오게 됨.
+*/
+/* 
+    ? ::before(전위) & ::after(후위)
+    * content라는 속성에 넣어주면 그 대상이 각 위치에(before는 맨 위, after는 맨 아래=코드상에서)나옴.
+    * 다수의 대상을 넣을 시에는 구분자할 때 띄어쓰기로 넣어주면 됨.
+    ! 화면상에 들어가는 요소들을 처리하기에는 매우 적합하나 data가 들어오는 공간엔 사용 금지
+    (ex> 총 금액 : 1,280,000원 -> 원을 ::after content('원'); 
+    -> 금액은 data = Data가 들어올때는 양호하나 만약 다시 재전송되어야할 경우 저 '원'이 딸려들어감)
+*/
