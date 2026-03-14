@@ -298,7 +298,7 @@
 */
 /* 
     ? attr(): 지정된 attribute의 값을 가져오는 함수.
-    * ex> img의 src를 attr(src) 이런식응로 넣어주면 "httpsL//placehold/co/150" 이런 값이 넘어오게 됨.
+    * ex> img의 src를 attr(src) 이런식으로 넣어주면 "https://placehold/co/150" 이런 값이 넘어오게 됨.
 */
 /* 
     ? ::before(전위) & ::after(후위)

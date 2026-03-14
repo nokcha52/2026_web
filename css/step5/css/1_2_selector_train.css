@@ -46,6 +46,7 @@ article p mark{
     clear: both;
 }
 article > :first-child{
+    /* 직계선택자를 쓴 이유는 여기서 first-childe는 h1뿐만 아니라 strong도 포함되기 때문. */
     font-size: 200px;
     line-height: 120px;
     width: 40%;
