@@ -95,6 +95,7 @@ ul li span{
     padding: 10px 2.5%;
     font-size: 14px;
     word-break: break-all;
+    /* 단어를 쪼개는 방식. */
 }
 ul li span:not(:nth-child(2)){
     width: 15%;
