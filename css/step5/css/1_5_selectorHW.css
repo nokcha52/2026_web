@@ -27,7 +27,7 @@ ul li:nth-of-type(2n):hover{
     background-color: orange;
 }
 ul li:nth-of-type(2n):hover span:nth-child(2){
-    color: white  ;
+    color: white;
 }
 ul li:nth-of-type(2n):hover span:not(:nth-child(2)){
     color: #afe8b0;
@@ -42,7 +42,7 @@ ul li:nth-child(2n+1):not(:first-child):hover span:nth-child(2){
     color: #ff365a;
 }
 ul li:nth-child(2n+1):not(:first-child):hover span:not(:nth-child(2)){
-     color: #afeeee;
+    color: #afeeee;
 }
 ul li span{
     display: block;
