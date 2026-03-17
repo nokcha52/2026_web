@@ -1,0 +1,33 @@
+body,ul,dl,dt,dd,figure{
+    margin: 0;
+    padding: 0;
+}
+div{
+    margin-bottom: 30px;
+}
+.displayProperty span:nth-child(1){
+    display: block;
+    width: 50%;
+    background-color: #fc9393;
+    padding: 30px;
+    box-sizing: border-box;
+}
+.displayProperty span:nth-child(2){
+    display: inline-block;
+    background-color: #94fc93;
+    width: 25%;
+    padding: 30px;
+    /* margin: 30px 0; */
+}
+.displayProperty span:nth-child(3){
+    display: inline;
+    width: 75%;
+    background-color: #93c5fc;
+    margin: 50px;
+    padding: 30px;
+}
+.displayProperty span:nth-child(4){
+    display: none;
+    background-color: #5c38fc;
+    /* !화면 자체에 존재하지 않음. 부드러운 움직임 등의 효과 적용도 어려움. 자칫 잘못하면 serverData 씹힘. */
+}
