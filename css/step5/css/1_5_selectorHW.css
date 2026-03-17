@@ -21,7 +21,7 @@ ul li:first-child{
     border-bottom: 1px solid deeppink;
 }
 ul li:last-child{
-    border-bottom: 1px solid deeppink
+    border-bottom: 1px solid deeppink;
 }
 ul li:nth-of-type(2n):hover{
     background-color: orange;
