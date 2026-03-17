@@ -1,0 +1,127 @@
+body{
+    width: 80%;
+    margin: 0 auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+ul:first-of-type{
+    margin: 30px 0 10px;
+    padding: 0;
+}
+ul li{
+    list-style: none;
+    padding: 5px 10px;
+}
+ul li::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+ul li:first-child{
+    background-color: #505050;
+    border-bottom: 1px solid deeppink;
+}
+ul li:last-child{
+    border-bottom: 1px solid deeppink
+}
+ul li:nth-of-type(2n):hover{
+    background-color: orange;
+}
+ul li:nth-of-type(2n):hover span:nth-child(2){
+    color: white  ;
+}
+ul li:nth-of-type(2n):hover span:not(:nth-child(2)){
+    color: #afe8b0;
+}
+ul li:nth-child(2n+1):not(:first-child){
+    background-color: #e9e9e9;
+}
+ul li:nth-child(2n+1):not(:first-child):hover{
+    background-color: #00008b;
+}
+ul li:nth-child(2n+1):not(:first-child):hover span:nth-child(2){
+    color: #ff365a;
+}
+ul li:nth-child(2n+1):not(:first-child):hover span:not(:nth-child(2)){
+     color: #afeeee;
+}
+ul li span{
+    display: block;
+    float: left;
+    padding: 10px 2.5%;
+    font-size: 16px;
+    word-break: keep-all;
+}
+ul li span:not(:nth-child(2)){
+    width: 15%;
+    color: #999999;
+}
+ul li span:nth-child(2){
+    width: 35%;
+}
+ul li:first-child span:nth-child(2){
+    color: #98fb98;;
+}
+ul li:not(:first-child) span:nth-child(2){
+    color: #ff4500;
+}
+div:first-of-type{
+    position: relative;
+    width: 50%;
+    margin: 0 auto;
+}
+div:first-of-type a{    
+    font-size: 16px;
+    text-decoration: none;    
+    display: block;
+}
+div:first-of-type > a{
+    position: absolute;
+    top: 0;
+}
+div:first-of-type > a:first-child{
+    left: 20px;
+}
+div:first-of-type > a:last-child{
+    right: 20px;
+}
+div:first-of-type ol{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+div:first-of-type ol li{
+    display: inline-block;
+    width: 8%;    
+}
+div:first-of-type ol li a{
+    display: block;
+}
+div:first-of-type ol li:hover a{
+    border-radius: 4px;
+    background-color: purple;
+    color: #cd6dee;
+}
+form:first-of-type fieldset{
+    border: none;
+    margin: 30px auto;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* input끼리 높이가 안맞아서 flex 사용.. */
+}
+form:first-of-type fieldset input{
+    line-height: 20px;
+    border: 1px solid;      
+    padding: 0 10px;
+}
+form:first-of-type fieldset input[type='submit']{
+    margin-left: 10px;
+    background-color: #e6e6fa;
+    border-color: #9932cc;
+    color: #9932cc;
+    font-size: 20px;  
+    box-sizing: border-box;
+}
