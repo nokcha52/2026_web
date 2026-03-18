@@ -73,6 +73,7 @@ div:first-of-type a{
     font-size: 16px;
     text-decoration: none;    
     display: block;
+    color: black;
 }
 div:first-of-type > a{
     position: absolute;
