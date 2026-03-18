@@ -4,7 +4,7 @@ body{
 }
 div.wrap header{
     width: 70%;
-     margin: 0 auto;
+    margin: 0 auto;
 }
 .wrap a{
     text-decoration: none;
@@ -17,8 +17,12 @@ div.wrap header{
 }
 .wrap header{
     position: relative;
-    padding: 20px 40% 0;
+    padding: 20px 40% 0 0;
     margin-bottom: 90px;
+}
+.wrap header h1{
+    margin: 0;
+    color: #fff;
 }
 .wrap header nav{
     position: absolute;
@@ -38,7 +42,7 @@ div.wrap header{
 }
 .wrap header nav ul li{
     width: 20%;
-    float: right;
+    float: left;
     padding: 10px 0;
     min-width: 50px;
 }
