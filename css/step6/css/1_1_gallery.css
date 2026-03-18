@@ -1,0 +1,115 @@
+body{
+    margin: 0;
+    background-color: #333;
+}
+div.wrap header{
+    width: 70%;
+     margin: 0 auto;
+}
+.wrap a{
+    text-decoration: none;
+    display: block;
+}
+.wrap ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.wrap header{
+    position: relative;
+    padding: 20px 40% 0;
+    margin-bottom: 90px;
+}
+.wrap header nav{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40%;
+}
+.wrap header nav ul{
+    border-width: 1px 0;
+    border-style: solid;
+    border-color: #555;
+}
+.wrap header nav ul::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.wrap header nav ul li{
+    width: 20%;
+    float: right;
+    padding: 10px 0;
+    min-width: 50px;
+}
+.wrap header nav ul li a{
+    color: #f0f0f0;
+    font-size: 12px;
+    text-align: center;
+}
+.wrap header nav ul li:not(:first-child) a{
+    border-left: 1px solid #e1e1e1;
+}
+/*
+div.wrap header::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+div.wrap header h1{
+    width: 60%;
+    color: white;
+    float: left;
+}
+div.wrap header nav{
+    width: 40%;
+    float: right;
+}
+div.wrap header nav ul{
+    list-style: none;
+    border-top: 1px solid white;    
+    border-bottom: 1px solid white;    
+    padding: 10px 0;
+}
+div.wrap header nav ul::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+div.wrap header nav ul li{
+    float: left;
+    width: 20%;    
+    text-align: center;
+}
+div.wrap header nav ul li:not(:last-child){
+    border-right: 1px solid lightgray;
+    box-sizing: border-box;
+}
+div.wrap header nav ul li a{
+    display: block;
+    color: white;    
+    text-decoration: none;
+}
+div.wrap ul::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+div.wrap ul li {
+    width: 30%;
+    float: left;
+    list-style: none;
+    margin-bottom: 5%;
+}
+div.wrap ul li a{
+    display: block;
+}
+div.wrap ul li a img{
+    display: block;
+    width: 80%;
+    opacity: 0.5;
+}
+div.wrap footer {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+} */
