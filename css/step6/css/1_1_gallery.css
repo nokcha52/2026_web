@@ -22,7 +22,11 @@ div.wrap header{
 }
 .wrap header h1{
     margin: 0;
+<<<<<<< HEAD
+    color: #fff;
+=======
     color: white;
+>>>>>>> 3936d77b5f2c99772c51c0c2573b6e78086d5e82
 }
 .wrap header nav{
     position: absolute;

@@ -33,9 +33,9 @@ div{
 }
 /*
     ? display의 속성은 총 4가지
-    * block = block이 되게 되면 width:100%의 값을 갖는 위에서 아래로 나열되는 객체가 된다.
+    * block = block이 되면 width:100%의 값을 갖는 위에서 아래로 나열되는 객체가 된다.
     * inline-block = inline-block이 되면 width의 값을 가질수 있고, inline 타입으로 (옆으로) 나열되는 객체가 된다.
-    * inline = inline이 되면 width등의 크기나 간격 등의 값을 가질수 없고 옆으로는 나열 되지만, 간격을 벌릴수 없는 객체가 된다.
+    * inline = inline이 되면 width등의 크기나 간격 등의 값을 가질 수 없고 옆으로는 나열 되지만, 간격을 벌릴 수 없는 객체가 된다.
     * none = 대상이 보이지 않는다. (렌더 자체가 안된다.)
 */
 
