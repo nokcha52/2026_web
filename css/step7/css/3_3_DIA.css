@@ -52,5 +52,5 @@ div span:nth-child(5){
 div span:nth-child(6){
     background-color: aqua;
     height: 200px;
-    transform: rotateX(90deg);
+    transform: rotateX(270deg);
 }
