@@ -67,14 +67,14 @@
     header div nav ul li a:hover{
         color: #00e0d0;
     }
-    /* header GNB fin */
+    /* header GNB(Global Navigation Bar) fin */
     header div>ul{
         margin-bottom: 125px;
     }
     header div>ul li{
         padding-top: 165px;
         display: block;
-        /* 불릿 제거, 슬라이드 사용 시 float를 사용해야해서 block을 줌 */
+        /* 불릿 제거/ 슬라이드 사용 시 float를 사용해야해서 block을 줌 */
     }
     header div>ul li h2{
         font-size: 32px;
