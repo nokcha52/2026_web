@@ -1,10 +1,36 @@
+    header div nav ul li a{
+        font-family: 'Roboto';
+    }
+     header div>ul li h2{
+        font-family: 'Playfair Display';   
+    }
+    header div>ul li p{
+        font-family: 'Roboto';
+    }
+    a{
+        text-decoration: none;
+    }
+    .btn_more{
+        font-family: 'Hammersmith One';
+        font-weight: 400;
+        display: block;
+        text-align: center;
+        font-size: 16px;
+        border: 1px solid #00e0d0;
+        color: #00e0d0;
+        padding: 12px 0.5%;
+        /* 버튼의 좌우패딩은 그저 글자를 띄워놓기 때문이기 때문에 0.5%만 넣어도 된다. */
+        box-sizing: border-box;
+    }
+    /* ? A/U */
+
 @media screen and (min-width:1280px) {
     header{
         padding: 15px 0 70px;
         background: url('../images/bg_01.png') left top /cover no-repeat;
     }
     header div{
-        max-width: 940px;
+        max-width: 942px;
         margin: 0 auto;
         position: relative;
     }
@@ -16,6 +42,80 @@
     }
     header div h1 a img{
         width: 100%;
-        /* display: block; */
     }
+    header div nav{
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: calc(100% - 130px);
+        text-align: right;
+    }
+    header div nav ul li{
+        display: inline-block;
+    }
+    header div nav ul li:not(:first-child){
+        margin-left: 2.56%;
+    }
+    header div nav ul li a{
+        line-height: 50px;
+        display: block;
+        font-size: 13px;
+        font-weight: 900;
+        color: white;
+    }
+    header div nav ul li a.active,
+    header div nav ul li a:hover{
+        color: #00e0d0;
+    }
+    /* header GNB fin */
+    header div>ul{
+        margin-bottom: 125px;
+    }
+    header div>ul li{
+        padding-top: 165px;
+        display: block;
+        /* 불릿 제거, 슬라이드 사용 시 float를 사용해야해서 block을 줌 */
+    }
+    header div>ul li h2{
+        font-size: 32px;
+        font-weight: 900;
+        color: white;
+        text-align: center;
+        padding: 22px;
+        background: url("../images/border.png") no-repeat center bottom;
+        margin-bottom: 30px;
+    }
+    header div>ul li p{
+        font-size: 14px;
+        font-weight: 300;
+        color: white;
+        line-height: 24px;
+        max-width: 775px;
+        margin: 0 auto 50px;
+        text-align: center;
+    }
+    header div>ul li a.btn_more{
+        max-width: 120px;
+        margin: 0 auto;
+    }
+    header div ol{
+        text-align: center;
+    }
+    header div ol li{
+        display: inline-block;
+    }
+    header div ol li a{
+        display: block;
+        text-indent: -9999px;
+        width: 8px;
+        height: 8px;
+        border: 1px solid rgba(255,255,255,0.8);
+        border-radius: 5px;
+    }
+    header div ol li a.active,
+    header div ol li a:hover{
+        background-color: #00e0d0;
+        border-color: #00e0d0;
+    }
+    /* header 끝 */
 }
