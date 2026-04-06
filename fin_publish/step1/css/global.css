@@ -1,9 +1,15 @@
     header div nav ul li a,
     header div > ul li p,
-    footer *{
+    #about figcaption p,
+    section.videoArea h2,
+    section.expArea ul,
+    footer > div *{
         font-family: 'Roboto';
     }
-     header div>ul li h2{
+    header div>ul li h2,
+    #about figcaption h2,
+    section.expArea > h2,
+    section.expArea > *:not(ul){
         font-family: 'Playfair Display';   
     }
     a{
@@ -21,9 +27,19 @@
         /* 버튼의 좌우패딩은 그저 글자를 띄워놓기 때문이기 때문에 0.5%만 넣어도 된다. */
         box-sizing: border-box;
     }
+    section[class$='Area'] > hr{
+        /* 구조상 모듈 : 시안 속에서 특정 구조가 있다면 작성하는 방식 */
+        width: 50px;
+        /* hr은 보더가 아니라 사각형이다 */
+        border-width: 2px 0 0;
+        border-style: solid;
+        margin: 0 auto 45px;
+    }
     /* ? A/U */
 
 @media screen and (min-width:1280px) {
+    #about,
+    section.expArea,
     footer > div{
         max-width: 940px;
         padding: 70px 0;
@@ -213,10 +229,10 @@
         width: 35px;
         line-height: 35px;
         box-sizing: border-box;
-        border-radius: 18px;
+        border-radius: 50%;
         display: inline-block;
         border: 2px solid rgba(255, 255, 255, 0.5);
-        
+        /* 다시 찾아보기 */
     }
     footer > div div:nth-of-type(3) ul li:not(:first-of-type){
         margin-left: 5px;
@@ -239,6 +255,8 @@
     footer > div div:nth-of-type(3) ul li:nth-of-type(6){
         background-image: url(../images/ico_sns_06.png);
     }
+
+
     footer > div div:nth-of-type(3) a{
         display: block;
         text-indent: -9999px;
@@ -250,5 +268,13 @@
         clear: left;
         font-weight: 400;
     }
+    footer > div div:last-of-type a:not(:first-of-type){
+        margin-left: 30px;
+    }
+    footer > div div:last-of-type p{
+        float: right;
+        /* 혼자 float라서 상관없음 */
+    }
+    
     /* after은 부모가 끌려가는거기 때문에, div 4번째에 clear 넣기*/
 }
