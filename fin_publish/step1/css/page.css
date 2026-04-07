@@ -138,5 +138,175 @@
     section.expArea ul li:not(:nth-child(3n)){
         border-right: 1px solid rgba(0,0,0,0.2);
     }
+    /* 
+        ? border 규칙
+        *1. 대상들의 x축 외곽선을 위로 볼지 아래로 볼지 결정 -> 현재 위로 봄. (이유: 마지막 라인은 불규칙하기 때문에)
+        *2. 범위지정 선택자 -> :시작범위:종료범위 -> 현재 n(계속 1씩 증가):-n+3(3부터 계속 1씩 감소) = 1부터 3까지 범위 지정
+        *3. y축 외곽선을 좌로 볼지 우로 볼지 결정 -> 현제 우로 봄 (이유: 상관 없지만 조금이나마 코드가 짧음 = 왼쪽으로 볼 경우 3n+1
+    */
+    section.expArea ul li h3{
+        font-weight: 900;
+        font-size: 14px;
+        color: #413d4b;
+        margin-bottom: 20px;
+    }
+    section.expArea ul li p{
+        font-weight: 300;
+        line-height: 22px;
+        color: rgba(51,51,51,0.75);
+        font-size: 14px;
+    }
+    /* ? expArea Fin */
+    section.teamArea{
+        background: url(../images/bg_03.png) left top/ cover no-repeat;
+        padding: 70px 0;
+        text-align: center;
+        color: white;
+    }
+    section.teamArea h2{
+        font-size: 22px;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+    section.teamArea p{
+        font-size: 14px;
+    }
+    section.teamArea h2+p{
+        font-weight: 400;
+        margin-bottom: 15px;
+    }
+    section.teamArea hr{
+        border-color: rgba(255,255,255,0.2);
+    }
+    section.teamArea ul{
+        max-width: 940px;
+        margin: 0 auto 70px;
+    }
+    section.teamArea ul::after{
+        content: '';
+        display: block;
+        clear: both;
+    }
+    section.teamArea ul li{
+        width: 23.5%;
+        float: left;
+        display: block;
+    }
+    section.teamArea ul li:not(:first-child){
+        margin-left: 2%;
+    }
+    section.teamArea ul li figure{
+        background: url('https://placehold.co/220x230') center top/ contain no-repeat;
+        padding-top: 230px;
+    }
+    section.teamArea ul li figure figcaption{
+        border: 1px solid rgba(255,255,255,0.5);
+        padding: 20px;
+    }
+    section.teamArea ul li figure figcaption dl dt{
+        font-weight: 900;
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+    section.teamArea ul li figure figcaption dl dd{
+        font-weight: 300;
+        font-size: 13px;
+        color: rgba(255,255,255,0.7);
+    }    
+    section.teamArea ul+p{
+        font-weight: 300;
+        font-size: 14px;
+        margin-bottom: 25px;
+    }
+    section.teamArea a.btn_more{
+        max-width: 140px;
+        margin: 0 auto;
+    }
+    section.worksArea{
+        padding: 70px 0;
+    }
+    section.worksArea h2{
+        max-width: 940px;
+        margin: 0 auto 70px;
+        color: #413d4b;
+        font-size: 22px;
+        font-weight: 700;
+        position: relative;
+    }
+    section.worksArea h2 a{
+        position: absolute;      
+        right: 0;
+        top: 0;
+        color: #413d4b;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 22px;
+    }
+    section.worksArea ul{
+        width: 100%;
+        list-style: none;
+        margin-bottom: 70px;
+    }
+    section.worksArea ul::after{
+        content: '';
+        display: block;
+        clear: both;
+    }
+    section.worksArea ul li{
+        width: 16.66%;
+        float: left;
+    }
+    section.worksArea ul li *{
+        display: block;
+    }
+    /* 이미지에 마진을 없애기 위해 */
+    section.worksArea ul li a img{
+        width: 100%;
+    }
+    section.worksArea a.btn_more{
+        max-width: 120px;
+        margin: 0 auto;
+    }
+    /* ? worksArea Fin */
+    section.talkArea{
+        background: url(../images/bg_04.png) left top/ cover no-repeat;
+        padding: 70px 0;
+        text-align: center;
+    }
+    /* section은 제목과 사진등등이 있을 경우 써야함. 구조 html 다시 보기 */
+    section.talkArea h2{
+        display: none;
+    }
+    section.talkArea p{
+        max-width: 770px;
+        margin: 0 auto 45px;
+        color: white;
+        padding-top: 70px;
+        background: url(../images/quote.png) no-repeat center top;
+        font-size: 16px;
+        line-height: 26px;
+        font-weight: 400;
+    }
+    section.talkArea p *{
+        display: block;
+    }
+    section.talkArea p strong{
+        margin: 40px 0 0;
+        font-size: 14px;
+        font-weight: 900;
+    }
+    section.talkArea p span{
+        font-size: 13px;
+        font-weight: 300;
+        color: rgba(255,255,255,0.7);
+    }
+    section.talkArea div{
+        max-width: 940px;
+        margin: 0 auto;
+    }
+    section.talkArea div > *{
+        display: inline-block;
+        vertical-align: middle;
+    }
 }
 /* desktop */
