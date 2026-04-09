@@ -48,29 +48,25 @@
     }
     /* ? A/U */
 
-@media screen and (min-width:768px) and (max-width:1279px) {
+@media screen and (min-width: 768px) and (max-width: 1279px) {
     #about,
     section.expArea,
     section.contactArea,
     footer > div{
-        max-width: /*940px*/728px;
+        max-width: /*940px*/728px; padding: 70px 0; margin: 0 auto;
         /* 
-            ? max-width 로 tablet부터 처리한다는 의미는 가장 작은 장치를 기준으로만 작업하겠다는 의미
-            ! 단점은 화면크기가 큰 태블릿일수록 좌,우 공백이 많이 남게 됨.
-            ? safetypadding으로 tablet부터 처리한다는 의미는 모든 장치를 기준으로 작업하겠다는 의미
-            ! 단점은 작업자가 머리아픔..
+            ? max-width로 tablet부터 처리한다는 의미는 가장 작은 장치를 기준으로만 작업하겠다는 의미
+            ! 단점은 화면크기가 큰 태블릿일수록 좌,우 공백이 많이 남게됨.
+            ? safetyPadding으로 tablet부터 처리한다는 의미는 모든 장치를 기준으로 작업하겠다는 의미
+            ! 단점은 작업자가 머리아픔...
         */
-        padding: 70px 0;
-        margin: 0 auto;
     }
+
     header{
-        padding: 15px 0 70px;
-        background: url('../images/bg_01.png') left top /cover no-repeat;
+        padding: 15px 0 70px; background: url('../images/bg_01.png') left top / cover no-repeat;
     }
     header div{
-        max-width: 728px;
-        margin: 0 auto;
-        position: relative;
+        max-width: /*940px*/728px; margin: 0 auto; position: relative;
     }
     header div h1{
         max-width: 128px;
@@ -79,62 +75,42 @@
         display: block;
     }
     header div h1 a img{
-        width: 100%;
+        width: 100%; 
     }
     header div nav{
-        position: absolute;
-        right: 0;
-        top: 0;
-        width: calc(100% - 130px);
+        position: absolute; right: 0; top: 0; width: calc(100% - 130px);
         text-align: right;
     }
     header div nav ul li{
         display: inline-block;
     }
     header div nav ul li:not(:first-child){
-        margin-left: 2.56%;
+        margin-left: 2.65%;
     }
     header div nav ul li a{
-        line-height: 50px;
-        display: block;
-        font-size: 13px;
-        font-weight: 900;
-        color: white;
+        line-height: 50px; display: block; font-size: 13px; font-weight: 900; color: white;
     }
     header div nav ul li a.active,
     header div nav ul li a:hover{
         color: #00e0d0;
     }
-    /* header GNB(Global Navigation Bar) fin */
-    header div>ul{
+    /* ? header GNB fin */
+    header div > ul{
         margin-bottom: 125px;
     }
-    header div>ul li{
-        padding-top: 165px;
-        display: block;
-        /* 불릿 제거/ 슬라이드 사용 시 float를 사용해야해서 block을 줌 */
+    header div > ul li{
+        padding-top: 165px; display: block;
     }
-    header div>ul li h2{
-        font-size: 32px;
-        font-weight: 900;
-        color: white;
-        text-align: center;
-        padding: 22px;
-        background: url("../images/border.png") no-repeat center bottom;
-        margin-bottom: 30px;
+    header div > ul li h2{
+        font-size: 32px; font-weight: 900; color: white; text-align: center; padding-bottom: 22px;
+        background: url('../images/border.png') no-repeat center bottom; margin-bottom: 30px;
     }
-    header div>ul li p{
-        font-size: 14px;
-        font-weight: 300;
-        color: white;
-        line-height: 24px;
-        max-width: 775px;
-        margin: 0 auto 50px;
-        text-align: center;
+    header div > ul li p{
+        font-size: 14px; font-weight: 300; color: white; line-height: 24px; max-width: 775px;
+        margin: 0 auto 50px; text-align: center;
     }
-    header div>ul li a.btn_more{
-        max-width: 120px;
-        margin: 0 auto;
+    header div > ul li a.btn_more{
+        max-width: 120px; margin: 0 auto;
     }
     header div ol{
         text-align: center;
@@ -143,53 +119,42 @@
         display: inline-block;
     }
     header div ol li a{
-        display: block;
-        text-indent: -9999px;
-        width: 8px;
-        height: 8px;
+        display: block; text-indent: -9999px; width: 8px; height: 8px; border-radius: 5px;
         border: 1px solid rgba(255,255,255,0.8);
-        border-radius: 5px;
     }
     header div ol li a.active,
     header div ol li a:hover{
-        background-color: #00e0d0;
-        border-color: #00e0d0;
+        background-color: #00e0d0; border-color: #00e0d0;
     }
-    /* header 끝 */
-    footer {
-        background: url('../images/bg_05.png') left top/ cover no-repeat;
+    /* ? header Fin */
+
+    footer{
+        background: url('../images/bg_05.png') left top / cover no-repeat;
     }
-    /* 내부 구조가 복잡하면 type쓰기 */
-    footer > div div:not(:last-of-type){
-        float: left;
-        width: 31%;
-        margin: 0 0 70px 3.5%;
+    /* footer > div div:not(:last-of-type){
+        float: left; width: 31%; margin: 0 0 70px 3.5%;
     }
     footer > div div:first-of-type{
         margin-left: 0;
-        /* 공통된 마진을 넣고 나중에 별도로 필요없는 부분을 빼면 취소선이 생길 이유가 없음. */
+    } */
+    footer > div div:nth-of-type(1),
+    footer > div div:nth-of-type(2){
+        float: left; width: 47.5%; margin: 0 0 70px;
+    }
+    footer > div div:nth-of-type(2){
+        margin-left: 5%;
     }
     footer > div div h2{
         margin-bottom: 20px;
-        /* 30px-10px */
     }
-    footer > div div h2:not(:first-of-type) h2{
-        line-height: 50px;
-        color: white;
-        font-size: 15px;
-        font-weight: 900;
+    footer > div div:not(:first-of-type) h2{
+        line-height: 50px; color: white;  font-size: 15px; font-weight: 900;
     }
-    /* 서로의 줄간이 있을 경우 10px 한쪽만 있을경우 5px */
-
-    
     footer > div div:not(:nth-of-type(3)){
-        font-size: 14px;
-        line-height: 26px;
-        color: white;
+        font-size: 14px; line-height:26px; color: white;
     }
     footer > div div:not(:nth-of-type(3)) a{
         color: inherit;
-        /* inherit는 어느 속성에든 사용 가능. 소극적으로 사용하기. */
     }
     footer > div div:nth-of-type(1),
     footer > div div:nth-of-type(2){
@@ -199,100 +164,77 @@
         font-style: normal;
     }
     footer > div div:nth-of-type(2) address span{
-        display: block;
-        padding-left: 30px;
-        background-repeat: no-repeat;
+        display: block; padding-left: 30px; background-repeat: no-repeat;
         background-position: left 5px;
     }
     footer > div div:nth-of-type(2) address span:first-of-type{
-        background-image: url(../images/bul_map.png);
-        margin-bottom: 10px;
+        background-image: url('../images/bul_map.png'); margin-bottom: 10px;
     }
     footer > div div:nth-of-type(2) address span:last-of-type{
-        background-image: url(../images/bul_phone.png);
+        background-image: url('../images/bul_phone.png');
     }
     footer > div div:nth-of-type(3) input{
-        float: left;
-        display: block;
-        margin-bottom: 25px;
-        box-sizing: border-box;
-        /* !! input들은 각기 다른 border padding을 갖고 있음. 그래서 박스사이징을 해줘야함. */
+        float: left; display: block; margin-bottom: 25px; box-sizing: border-box;
     }
     footer > div div:nth-of-type(3) input[type='email']{
-        width: 70%;
-        font-size: 14px;
-        border: 1px solid rgba(255, 255, 255, 0.5);
-        line-height: 43px;
-        color: white;
-        background-color: transparent;
-        padding: 0 15px;
+        width: /*70%*/35%; font-size:14px; border: 1px solid rgba(255,255,255,0.5);
+        line-height: 43px; padding: 0 15px; background-color: transparent; color: white;
     }
     footer > div div:nth-of-type(3) input[type='email']::placeholder{
-        color: rgba(255, 255, 255, 0.75);
+        color: rgba(255,255,255,0.75);
     }
     footer > div div:nth-of-type(3) input[type='submit']{
-        width: 25%;
-        margin-left: 5%;
-        text-indent: -9999px;
-        border: none;
-        line-height: 43px;
-        background: url(../images/btn_submit.png) no-repeat center rgba(255, 255, 255, 0.5);
-        /* background shorthand 다시 보기. 코드 순서상 맨앞에 있는 것이 맨 위로 올라오기 때문에 이미지를 제일 먼저 넣어주는것. 배경색상은 맨 마지막에 깔려야하므로 */
+        width: /*25%*/10%; margin-left: /*5%*/2%; text-indent: -9999px; border: none; line-height: 43px;
+        background: url('../images/btn_submit.png') no-repeat center rgba(255,255,255,0.5);
     }
     footer > div div:nth-of-type(3) ul{
-        clear: left;
+        /* clear: left; */ float: left; width: 45%; margin-left: 8%;
     }
-    /* todo. SNS ICon 배치 완성하기 */
     footer > div div:nth-of-type(3) ul li{
-        width: 35px;
-        line-height: 35px;
-        box-sizing: border-box;
-        border-radius: 50%;
-        display: inline-block;
-        border: 2px solid rgba(255, 255, 255, 0.5);
-        /* 다시 찾아보기 */
+        display: inline-block; width: 35px; line-height: 35px;
     }
-    footer > div div:nth-of-type(3) ul li:not(:first-of-type){
-        margin-left: 5%;
+    footer > div div:nth-of-type(3) ul li:not(:first-child){
+        margin-left: /*5px*/ 5.8%;
     }
-    footer > div div:nth-of-type(3) ul li:nth-of-type(1){
-        background-image: url(../images/ico_sns_01.png);
+    footer > div div:nth-of-type(3) ul li a{
+        display: block; text-indent: -9999px; background-repeat: no-repeat; background-size: contain;
     }
-    footer > div div:nth-of-type(3) ul li:nth-of-type(2){
-        background-image: url(../images/ico_sns_02.png);
+    /* todo. SNS ICON 이미지 넣기 */
+    footer > div div:nth-of-type(3) ul li:nth-child(1) a{
+        background-image: url('../images/ico_sns_01.png');
     }
-    footer > div div:nth-of-type(3) ul li:nth-of-type(3){
-        background-image: url(../images/ico_sns_03.png);
+    footer > div div:nth-of-type(3) ul li:nth-child(2) a{
+        background-image: url('../images/ico_sns_02.png');
     }
-    footer > div div:nth-of-type(3) ul li:nth-of-type(4){
-        background-image: url(../images/ico_sns_04.png);
+    footer > div div:nth-of-type(3) ul li:nth-child(3) a{
+        background-image: url('../images/ico_sns_03.png');
     }
-    footer > div div:nth-of-type(3) ul li:nth-of-type(5){
-        background-image: url(../images/ico_sns_05.png);
+    footer > div div:nth-of-type(3) ul li:nth-child(4) a{
+        background-image: url('../images/ico_sns_04.png');
     }
-    footer > div div:nth-of-type(3) ul li:nth-of-type(6){
-        background-image: url(../images/ico_sns_06.png);
+    footer > div div:nth-of-type(3) ul li:nth-child(5) a{
+        background-image: url('../images/ico_sns_05.png');
     }
-    footer > div div:nth-of-type(3) a{
-        display: block;
-        text-indent: -9999px;
-        background-repeat: no-repeat;
-        background-size: contain;
+    footer > div div:nth-of-type(3) ul li:nth-child(6) a{
+        background-image: url('../images/ico_sns_06.png');
     }
+
+
     footer > div div:last-of-type{
-        clear: left;
-        font-weight: 400;
+        clear: left; font-weight: 400;
+    }
+    footer > div div:last-of-type a{
+        display: inline-block;
     }
     footer > div div:last-of-type a:not(:first-of-type){
         margin-left: 30px;
     }
     footer > div div:last-of-type p{
         float: right;
-        /* 혼자 float라서 상관없음 */
     }
-    
-    /* after은 부모가 끌려가는거기 때문에, div 4번째에 clear 넣기*/
+    /* ?footer Fin */
 }
+/* ? tablet */
 /* ? tablet */
 @media screen and (min-width:1280px) {
     #about,

@@ -1,7 +1,7 @@
 /* safety bassel : 태블릿 2% 모바일 3% */
 @media screen and (min-width:768px) and (max-width:1279px) {
     #about{
-        padding-left: 7%;
+        padding-left: 2.5%;
     }
     #about:after{
         content: '';
@@ -10,13 +10,13 @@
     }
     #about img{
         float: left;
-        width: 25%;
+        width: 32%;
         max-width: 235px;
     }
     #about figcaption{
         float: left;
-        margin-left: 10%;
-        width: 65%;
+        margin-left: 8%;
+        width: 60%;
     }
     #about figcaption > *:not(a){
         margin-bottom: 20px;
@@ -105,6 +105,8 @@
         box-sizing: border-box;
         background-repeat: no-repeat;
         background-position: center 30px;
+        min-height: 275px;
+        /* 글자의 길이가 늘어나서 float로 깨질 경우를 위해 최소 높이를 정해줘야함(원래는 디자이너가 해야할 일) */
     }
     section.expArea ul li p{
         max-width: 258px;
@@ -177,7 +179,7 @@
         border-color: rgba(255,255,255,0.2);
     }
     section.teamArea ul{
-        max-width: 940px;
+        max-width: 728px;
         margin: 0 auto 70px;
     }
     section.teamArea ul::after{
@@ -195,11 +197,12 @@
     }
     section.teamArea ul li figure{
         background: url('https://placehold.co/220x230') center top/ contain no-repeat;
-        padding-top: 230px;
+        /* 이미지를 넣은게 아니라 백그라운드로 넣었기 때문에 문제 발생 */
+        padding-top: 180px;
     }
     section.teamArea ul li figure figcaption{
         border: 1px solid rgba(255,255,255,0.5);
-        padding: 20px;
+        padding: 20px 0;
     }
     section.teamArea ul li figure figcaption dl dt{
         font-weight: 900;
@@ -224,7 +227,7 @@
         padding: 70px 0;
     }
     section.worksArea h2{
-        max-width: 940px;
+        max-width: 728px;
         margin: 0 auto 70px;
         color: #413d4b;
         font-size: 22px;
@@ -241,7 +244,6 @@
         line-height: 22px;
     }
     section.worksArea ul{
-        width: 100%;
         list-style: none;
         margin-bottom: 70px;
     }
@@ -262,27 +264,25 @@
         width: 100%;
     }
     section.worksArea a.btn_more{
-        max-width: 120px;
+        max-width: 140px;
         margin: 0 auto;
     }
     /* ? worksArea Fin */
-    section.talkArea{
-        background: url(../images/bg_04.png) left top/ cover no-repeat;
-        padding: 70px 0;
+   section.talkArea{
+        background: url('../images/bg_04.png') left top / cover no-repeat; padding: 70px 0;
         text-align: center;
     }
-    /* section은 제목과 사진등등이 있을 경우 써야함. 구조 html 다시 보기 */
     section.talkArea h2{
         display: none;
     }
     section.talkArea p{
-        max-width: 770px;
+        max-width: 728px;
         margin: 0 auto 45px;
         color: white;
         padding-top: 70px;
-        background: url(../images/quote.png) no-repeat center top;
+        background: url("../images/quote.png") no-repeat center top;
         font-size: 16px;
-        line-height: 26px;
+        line-height:26px;
         font-weight: 400;
     }
     section.talkArea p *{
@@ -299,8 +299,7 @@
         color: rgba(255,255,255,0.7);
     }
     section.talkArea div{
-        max-width: 940px;
-        margin: 0 auto;
+        max-width: 728px; margin: 0 auto;
     }
     section.talkArea div > *{
         display: inline-block;
@@ -312,9 +311,9 @@
     }
     section.talkArea div ul{
         max-width: 310px;
-        width: 33%;
+        width: 40%;
     }
-    section.talkArea div ul::after{
+    section.talkArea div ul:after{
         content: '';
         display: block;
         clear: both;
@@ -329,16 +328,17 @@
     }
     section.talkArea div ul li a{
         display: block;
-        /* text-align: center; */
-        /* 이걸 안 주는 이유: 이미 적용되어있음 */
     }
     section.talkArea div ul li:not(.active) a{
         padding: 15px 0;
         transition: padding .35s ease-in-out;
     }
-    section.talkArea div ul li.active a img{
-        width: 65%;
-        transition: width .35s ease-in-out;
+    section.talkArea div ul li.active a ,
+    section.talkArea div ul li:not(.active):hover a{
+        padding: 0;
+    }
+    section.talkArea div ul li:not(.active) a img{
+        width: 65%; transition: width .35s ease-in-out;
     }
     section.talkArea div ul li.active a img,
     section.talkArea div ul li:not(.active):hover a img{
