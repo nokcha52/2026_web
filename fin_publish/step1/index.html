@@ -1,17 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TAJAM</title>
     <link rel="stylesheet" href="css/import.css">
 </head>
+
 <body>
     <header id="home">
         <div>
             <h1><a href="#home"><img src="images/logo.png" alt="welcome to TAJAM"></a></h1>
             <nav>
-                <ul> 
+                <ul>
+                    <!-- <input type="button" value="MUI"> -->
+                    <label for="mnav" class="mui">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </label>
+                    <input type="checkbox" id="mnav" class="mui">
+                    <!-- 이건 스크립트를 안쓰고 하는 방법. 절대비추천 -->
                     <li><a href="#home" class="active">HOME</a></li>
                     <li><a href="#about">ABOUT</a></li>
                     <li><a href="#expertise">EXPERTISE</a></li>
@@ -25,7 +35,10 @@
             <ul>
                 <li>
                     <h2>We Are Awesome Creative Agency</h2>
-                    <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.</p>
+                    <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean
+                        sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id
+                        elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum
+                        velit.</p>
                     <a href="#" class="btn_more">LEARN MORE</a>
                 </li>
             </ul>
@@ -43,8 +56,12 @@
         <img src="images/ci.png" alt="CI TAJAM">
         <figcaption>
             <h2>OUR STORY</h2>
-            <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus</p>
-            <p>Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+            <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean
+                sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis
+                sed odio sit amet nibh vulputate cursus</p>
+            <p>Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae
+                erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra,
+                per inceptos himenaeos.</p>
             <a href="#" class="btn_more">LEARN MORE</a>
         </figcaption>
     </figure>
@@ -58,7 +75,7 @@
         -->
     </section>
     <!-- ? video Fin -->
-    
+
     <!-- 
         expertise 구조화 실습 관련
         1. 배경없음 -> 2중첩필요없음 (figure) / title이 존재하니까 section or article 중에 하나를 선택 하기 좋은 상태
@@ -75,27 +92,27 @@
         <ul>
             <li>
                 <h3>WEB DESIGN &amp; DEVELOPMENT</h3>
-                <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean.</p>
+                <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean.</p>
             </li>
             <li>
                 <h3>BRANDING IDENTITY</h3>
-                <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean.</p>
+                <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean.</p>
             </li>
             <li>
                 <h3>MOBILE APP</h3>
-                <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean.</p>
+                <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean.</p>
             </li>
             <li>
                 <h3>SEARCH ENGINE OPTIMIZATION</h3>
-                <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean.</p>
+                <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean.</p>
             </li>
             <li>
                 <h3>GAME DEVELOPMENT</h3>
-                <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean.</p>
+                <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean.</p>
             </li>
             <li>
                 <h3>MADE WITH LOVE</h3>
-                <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean.</p>
+                <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet Aenean.</p>
             </li>
         </ul>
     </section>
@@ -112,49 +129,49 @@
                         ? img없음(표준위배,적응성하락) / 설명부분도 쓸때없이 구조가 두꺼움.
                     -->
                     <!-- <img src="https://placehold.co/220x230" alt="undefined"> -->
-                     <figcaption>
+                    <figcaption>
                         <!-- <strong></strong><i></i> -->
-                         <dl>
+                        <dl>
                             <dt>SEMF UCUK</dt>
                             <dd>CEO & FOUNDER</dd>
-                         </dl>
-                     </figcaption>
+                        </dl>
+                    </figcaption>
                 </figure>
             </li>
             <li>
                 <figure>
                     <!-- <img src="https://placehold.co/220x230" alt="undefined"> -->
-                     <figcaption>
+                    <figcaption>
                         <!-- <strong></strong><i></i> -->
-                         <dl>
+                        <dl>
                             <dt>DIK ADALIN</dt>
                             <dd>ENGINEERING</dd>
-                         </dl>
-                     </figcaption>
+                        </dl>
+                    </figcaption>
                 </figure>
             </li>
             <li>
                 <figure>
                     <!-- <img src="https://placehold.co/220x230" alt="undefined"> -->
-                     <figcaption>
+                    <figcaption>
                         <!-- <strong></strong><i></i> -->
-                         <dl>
+                        <dl>
                             <dt>JENG KOL</dt>
                             <dd>DESIGNER</dd>
-                         </dl>
-                     </figcaption>
+                        </dl>
+                    </figcaption>
                 </figure>
             </li>
             <li>
                 <figure>
                     <!-- <img src="https://placehold.co/220x230" alt="undefined"> -->
-                     <figcaption>
+                    <figcaption>
                         <!-- <strong></strong><i></i> -->
-                         <dl>
+                        <dl>
                             <dt>PET ROMAK</dt>
                             <dd>MARKETING</dd>
-                         </dl>
-                     </figcaption>
+                        </dl>
+                    </figcaption>
                 </figure>
             </li>
         </ul>
@@ -193,7 +210,10 @@
     <section id="peopleSay" class="talkArea">
         <h2>quote's Section</h2>
         <p>
-            This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.
+            This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean
+            sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed
+            odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio
+            tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit.
             <strong>JANE GALADRIEL</strong>
             <span>CEO TENGKUREP</span>
         </p>
@@ -267,12 +287,14 @@
                 <h2>
                     <img src="images/logo.png" alt="Good Bye.">
                 </h2>
-                <p>lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh elit. Duis sed odio sit amet auctror a ornare odio non mauris vitae erat in elit</p>
+                <p>lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh elit. Duis sed odio sit
+                    amet auctror a ornare odio non mauris vitae erat in elit</p>
             </div>
             <div>
                 <h2>OUR STUDIO</h2>
                 <address>
-                    <span>Ruko cucruk, Jl. Radio luar dalem jos No.12 - 13, Kalideres - Jakarta Barat 11480 - Indonesia</span>
+                    <span>Ruko cucruk, Jl. Radio luar dalem jos No.12 - 13, Kalideres - Jakarta Barat 11480 -
+                        Indonesia</span>
                     <span>
                         <a href="tel:+622122243333">(+62) 21-2224 3333</a>
                     </span>
@@ -305,4 +327,5 @@
     </footer>
     <!-- ? footer Fin -->
 </body>
+
 </html>
