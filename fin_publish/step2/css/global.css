@@ -14,9 +14,29 @@ input[type='checkbox']{
 a{
     text-decoration: none;
 }
+.selectBox{
+    display: inline-block;
+    box-sizing: border-box;
+    background: url(../images/bg_arrow.png) no-repeat right center;
+}
+.selectBox select{
+    border: none;
+    box-shadow: none;
+    background-image: none;
+    background-color: transparent;
+    appearance: none;    
+    /* 해킹코드: input의 형태를 벗겨버리고 싶으면 사용하는것. */
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 11px;
+    padding: 10px 20px 10px 0;
+    color: #343e5c;
+}
 
 @media screen and (max-width:1280px){    
     header > div,
+    header + nav .slideNav,
+    .contentArea,
     footer > div{
         max-width: 1170px;
         margin: 0 auto;
@@ -184,10 +204,6 @@ a{
         right: 0;
         top: 60px;
     }
-    footer > div > :first-child{
-        position: absolute;
-        left: 0;
-    }
     footer > div:first-child{
         border-bottom: 1px solid rgba(255,255,255,0.05);
     }
@@ -196,40 +212,22 @@ a{
         left: 0;
         top: 60px;
         max-width: 7.86%;
+        max-width: 92px;
         /* % 계산은 width가 1170px 기준일때 */
     }
     footer > div:first-child h2 img{
         width: 100%;
     }
-    footer > div > span a:nth-child(1){
-        background: url(../images/sns_01.png);
-    }
-    footer > div > span a:nth-child(2){
-        background: url(../images/sns_02.png);
-    }
-    footer > div > span a:nth-child(3){
-        background: url(../images/sns_03.png);
-    }
-    footer > div > span a:not(:first-child){
-        margin-left: 2.3%;
-    }
-    footer > div > ul{
+    footer > div:first-child ul{
         padding: 0 10%;
         text-align: center;
         text-transform: uppercase;
         letter-spacing: 1px;
-        list-style: none;
-    }
-    footer > div > ul::after{
-        content: '';
-        display: block;
-        clear: both;
     }
     footer > div > ul li{
         display: inline-block;
     }
-    footer > div > ul li:not(:first-child),
-    footer > div > span a:last-child{
+    footer > div > ul li:not(:first-child){
         margin-left: 2.56%;
         /* margin-left: calc(2.56% -4px); */
         /* inline-block의 강제 마진 4px을 없애는거임. 단위가 다를때 써야함 */
@@ -243,6 +241,15 @@ a{
     footer > div > span{
         width: 8.97%;
         text-align: right;
+    }    
+    footer > div:first-child > span a:nth-child(1){
+        background-image: url(../images/sns_01.png);
+    }
+    footer > div:first-child > span a:nth-child(2){
+        background-image: url(../images/sns_02.png);
+    }
+    footer > div:first-child > span a:nth-child(3){
+        background-image: url(../images/sns_03.png);
     }
     footer > div > span a{
         display: inline-block;        
@@ -264,11 +271,13 @@ a{
         width: 50%;
     }
     footer > div:nth-child(2) span{
+        width: 50%;
+        text-align: right;
         padding-top: 15px;
     }
     footer > div:nth-child(2) span a{
-        width: 50%;
-        text-align: right;
+        font-size: 11px;        
+        color: rgba(255,255,255,0.3);
         display: inline-block;
         font-weight: 600;
         text-transform: uppercase;
@@ -278,11 +287,8 @@ a{
         margin-left: 10%;
         /* 이건 1170px 기준으로 하는것이 아님. */
     }
-    footer > div:last-child{
-        background-color: #222328;
-    }
-    footer > div:last-child p{
-        max-width: 44.44%;
+    footer > div:nth-child(2) span a:last-of-type{
+        margin-left: 2.56%;
     }
 }
 /* desktop */

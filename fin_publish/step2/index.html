@@ -46,11 +46,11 @@
     <!-- ? header fin -->
     <!-- todo. sliderNav 구조화 직접실습해보기 -->
     <nav>
-        <div>
+        <div class="slideNav mont">
             <ul>
                 <li><a href="#">Top Sales</a></li>
                 <li><a href="#">Brand Focus</a></li>
-                <li><a href="#">Hi-tech</a></li>
+                <li><a href="#" class="active">Hi-tech</a></li>
                 <li><a href="#">Best Sellers</a></li>
                 <li><a href="#">Projects</a></li>
                 <li><a href="#">Support</a></li>
@@ -60,18 +60,20 @@
     </nav>
     <!-- ? sliderNav Fin -->
      <!-- ! 다음 슬라이더 구조는 JS 기능을 모두 본인이 작성할 수 있을 때 사용하는 구조-->
-    <section>
+    <section class="slideArea">
+        <!-- 여기도 마찬가지로 section 쓰면 안됨 -->
         <h2>slider Sector</h2>
         <div>
             <a href="#" class="btn_conL">&lt;</a>
             <a href="#" class="btn_conR">&gt;</a>
             <!-- controler -->
             <ol>
-                <li><a href="#">slide</a></li>
+                <li><a href="#" class="active">slide</a></li>
                 <li><a href="#">slide</a></li>
                 <li><a href="#">slide</a></li>
                 <li><a href="#">slide</a></li>
             </ol>
+            <!-- pager: 조작이 편할때/ indicator: 조작은 가능하지만 표시하는데 중점을 둔 목록 -->
             <!-- indicator -->
             <ul>
                 <li>
@@ -79,10 +81,10 @@
                         <img src="images/sample_slider.png" alt="iPhone 6">
                         <figcaption>
                             <dl>
-                                <dt>iPhone 6 32GB <br> Black</dt>
-                                <dd>At first, for some time, I was not able to answer him one word; but as he had taken me in his arms I held fast by him, or I should have fallen to the ground.</dd>
+                                <dt class="mont">iPhone 6 32GB <br> Black</dt>
+                                <dd class="crim">At first, for some time, I was not able to answer him one word; but as he had taken me in his arms I held fast by him, or I should have fallen to the ground.</dd>
                             </dl>
-                            <input type="button" value="Buy Now">
+                            <input type="button" value="Buy Now" class="mont">
                         </figcaption>
                     </figure>
                 </li>
@@ -96,7 +98,7 @@
         <form>
             <fieldset>
                 <label for="sb_Select">Sort By:</label>
-                <span class="selectBox">
+                <span class="selectBox sbSelect">
                     <select id="sb_Select">
                         <option>BEST MATCH</option>
                     </select>
@@ -110,7 +112,7 @@
                 <input type="checkbox" id="freeShipCheck">
                 <label for="freeShipCheck">Free Shipping</label>
                 <label for="ship_Select">SHIP TO :</label>
-                <span class="selectBox">
+                <span class="selectBox shipSelect">
                     <select id="ship_Select">
                         <option>USA</option>
                         <option>United Arab Emirates</option>
