@@ -52,7 +52,7 @@
     }
     header + nav .slideNav input[type='search']::placeholder{
         color: #a1a7bd;
-        /* 입력 전, 후, 성공, 실패 4가지 형태이다. 원래는 이 4가지의 글씨 색상을 고려해야한다. */
+        /* 입력 전, 후, 성공, 실패 4가지 형태이다. 원래는 시안에서 이 4가지의 글씨 색상을 고려해야한다. */
     }
     /* ?SlideNav fin */
     section.slideArea{
