@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Icons">
     <link rel="stylesheet" href="css/import.css">
     <!-- icon CDN : Content Delivery Network -->
-     <!-- 
+    <!-- 
         todo 1. import.css 생성
         todo 2. 위 icon CDN을 import.css 안으로 옮기기(위치 최상단)
         todo 3. 기존 reset.cs 가져와 연결하기
@@ -15,6 +16,7 @@
         todo 5. global.css, page.css 생성 후 desktop mediaquery 작성
      -->
 </head>
+
 <body>
     <header>
         <div class="mont">
@@ -26,7 +28,7 @@
             </h1>
             <input type="checkbox" id="mui">
             <!-- 반응형 수업시에 JS를 안배운 상태라 button click을 대신하기위함-->
-             <!-- nav>ul>li*5>a -->
+            <!-- nav>ul>li*5>a -->
             <nav>
                 <ul>
                     <li><a href="#">Home</a></li>
@@ -59,7 +61,7 @@
         </div>
     </nav>
     <!-- ? sliderNav Fin -->
-     <!-- ! 다음 슬라이더 구조는 JS 기능을 모두 본인이 작성할 수 있을 때 사용하는 구조-->
+    <!-- ! 다음 슬라이더 구조는 JS 기능을 모두 본인이 작성할 수 있을 때 사용하는 구조-->
     <section class="slideArea">
         <!-- 여기도 마찬가지로 section 쓰면 안됨 -->
         <h2>slider Sector</h2>
@@ -82,7 +84,9 @@
                         <figcaption>
                             <dl>
                                 <dt class="mont">iPhone 6 32GB <br> Black</dt>
-                                <dd class="crim">At first, for some time, I was not able to answer him one word; but as he had taken me in his arms I held fast by him, or I should have fallen to the ground.</dd>
+                                <dd class="crim">At first, for some time, I was not able to answer him one word; but as
+                                    he had taken me in his arms I held fast by him, or I should have fallen to the
+                                    ground.</dd>
                             </dl>
                             <input type="button" value="Buy Now" class="mont">
                         </figcaption>
@@ -97,6 +101,7 @@
         <!-- 여기서 클래스를 주면 안됨. 저건 나중에 공통으로 작업해야하기 때문에 없어야하는것. -->
         <form>
             <fieldset>
+                <!-- fieldset내부에서 나누고 싶을때 div를 사용가능. 단 div안에서 또 분류를 하고 싶다면 span을 써서 서로 겹쳐지지않게 만들기 -->
                 <label for="sb_Select">Sort By:</label>
                 <span class="selectBox sbSelect">
                     <select id="sb_Select">
@@ -107,6 +112,7 @@
                 <input type="search" id="sb_keywords" placeholder="ex> Tablet">
                 <label for="range_minprice">PRICE</label>
                 <input type="text" id="range_minprice">
+                <!-- ? 숫자만 입력되어야하는 text field는 반드시 약속된 class로 묶어주기 -->
                 <span>-</span>
                 <input type="text" id="range_maxprice">
                 <input type="checkbox" id="freeShipCheck">
@@ -222,18 +228,18 @@
                     <!-- todo. label for , input id는 비워두고 구조만짜보기 -->
                     <legend>
                         Condition
-                        <a href="#">See All</a>
-                        <input type="checkbox" id="condition_op1">
-                        <label for="condition_op1">New</label>
-                        <input type="checkbox" id="condition_op2">
-                        <label for="condition_op2">Manufacturer Refurbished</label>
-                        <input type="checkbox" id="condition_op3">
-                        <label for="condition_op3">Seller Refurbished</label>
-                        <input type="checkbox" id="condition_op4">
-                        <label for="condition_op4">Used</label>
-                        <input type="checkbox" id="condition_op5">
-                        <label for="condition_op5">For Parts or not Working</label>
                     </legend>
+                    <a href="#">See All</a>
+                    <input type="checkbox" id="condition_op1">
+                    <label for="condition_op1">New</label>
+                    <input type="checkbox" id="condition_op2">
+                    <label for="condition_op2">Manufacturer Refurbished</label>
+                    <input type="checkbox" id="condition_op3">
+                    <label for="condition_op3">Seller Refurbished</label>
+                    <input type="checkbox" id="condition_op4">
+                    <label for="condition_op4">Used</label>
+                    <input type="checkbox" id="condition_op5">
+                    <label for="condition_op5">For Parts or not Working</label>
                 </fieldset>
                 <fieldset>
                     <!-- todo. label for , input id는 비워두고 구조만짜보기 -->
@@ -246,7 +252,7 @@
             </form>
         </aside>
         <!-- ? leftAside -->
-        <section >
+        <section>
             <h3>ProductList</h3>
             <!-- todo  ul>li*11>figure>img[src='images/sample_product0$.png']+figcaption>dl>dt+dd*2-->
             <ul>
@@ -504,7 +510,8 @@
                             </dl>
                         </figcaption>
                     </figure>
-                    <p>This I have produced as a scantling of Jack’s great eloquence and the force of his reasoning upon such abstruse matters.</p>
+                    <p>This I have produced as a scantling of Jack’s great eloquence and the force of his reasoning upon
+                        such abstruse matters.</p>
                 </li>
                 <li>
                     <figure>
@@ -516,7 +523,8 @@
                             </dl>
                         </figcaption>
                     </figure>
-                    <p>Looking cautiously round, to ascertain that they were not overheard, the two hags cowered nearer to the fire, and chuckled heartily.</p>
+                    <p>Looking cautiously round, to ascertain that they were not overheard, the two hags cowered nearer
+                        to the fire, and chuckled heartily.</p>
                 </li>
                 <li>
                     <figure>
@@ -528,7 +536,8 @@
                             </dl>
                         </figcaption>
                     </figure>
-                    <p>This sounded a very good reason, and Alice was quite pleased to know it. 'I never thought of that before!'  she said.</p>
+                    <p>This sounded a very good reason, and Alice was quite pleased to know it. 'I never thought of that
+                        before!' she said.</p>
                 </li>
             </ul>
         </div>
@@ -554,7 +563,8 @@
         </div>
         <div class="mont">
             <p class="crim">
-                She gave my mother such a turn, that I have always been convinced I am indebted to Miss Betsey for having been born on a Friday.
+                She gave my mother such a turn, that I have always been convinced I am indebted to Miss Betsey for
+                having been born on a Friday.
             </p>
             <span>
                 <a href="#">Privacy Policy</a>
@@ -564,4 +574,5 @@
     </footer>
     <!-- ? footer Fin -->
 </body>
+
 </html>

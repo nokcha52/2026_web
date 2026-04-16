@@ -177,6 +177,174 @@
         color: #a1a7bd;
         text-transform: uppercase;
     }
+    .contentArea >form fieldset span.sbSelect{
+        margin-left: 3.41%;
+    }
+    .contentArea >form fieldset label[for='sb_keywords'],
+    .contentArea >form fieldset label[for='ship_Select']{
+        margin-left: 1.7%;
+        padding-left: 2.13%;
+        border-left: 2px solid rgba(0,0,0,0.05);
+    }
+    .contentArea >form fieldset input:not([type='checkbox']){
+        font-size: 13px;
+        background-color: #f0f2f7;
+        font-weight: 600;
+        border: 1px solid #e3e8f0;
+        line-height: 28px;
+        box-sizing: border-box;
+        border-radius: 15px;
+        padding: 0 1%;
+        font-family: inherit;
+    }
+    .contentArea >form fieldset input:not([type='checkbox'])::placeholder{
+        color: #b9bfb3;
+    }
+    .contentArea >form fieldset input[type='search']{
+        width: 14%;
+    }
+    .contentArea >form fieldset input[type='text']{
+        width: 5.5%;
+    }
+    .contentArea >form fieldset input[type='search'],
+    .contentArea >form fieldset input#range_minprice{
+        margin-left: 0.85%;
+    }
+    .contentArea >form fieldset label[for='range_minprice'],
+    .contentArea >form fieldset label[for='freeShipCheckbox']{
+        margin-left: 2.56%;
+    }
+    .contentArea >form fieldset label[for='freeShipCheck']{
+        padding-left: 2.56%;
+        font-size: 13px;
+        color: #343e5c;
+        transition: background .5s ease-out;
+    }
+    .contentArea >form fieldset input[type='checkbox']:checked+label[for='freeShipCheck']{
+        background: url(../images/bul_check.png) no-repeat left center;
+    }
+    .contentArea >form fieldset .shipSelect select{
+        text-align: right;
+    }
+    /* sortBar Fin */
+    .contentArea aside{
+        width: 23.07%;
+        float: left;        
+    }
+    .contentArea aside nav{
+        background-color: #fff;
+        border-radius: 5px;
+        margin-bottom: 30px;
+    }
+    .contentArea aside nav ul li,
+    .contentArea aside nav ul li a{
+        display: block;
+    }
+    .contentArea aside nav ul > li:not(:last-child){
+        border-bottom: 1px solid #f0f2f7;
+    }
+    .contentArea aside nav ul > li > a{
+        /* 이건 270px 기준으로 구해야함 */
+        font-size: 13px;
+        color: #343e5c;
+        font-weight: 600;
+        padding: 15px 7%;
+    }    
+    .contentArea aside nav ul > li a::after{
+        content: url('../images/bg_arrow.png');
+        float: right;
+        transform: rotate(-90deg);
+        transition: transform 0.5s ease-out;
+    }    
+    .contentArea aside nav ul > li:hover > a::after{
+        transform: rotate(0deg);
+    }
+    .contentArea aside nav ul > li ol{
+        background-color: #f0f2f7;
+    }
+    .contentArea aside nav ul > li ol li a{
+        font-size: 0;
+        font-weight: 600;
+        color: #a1a8bd;
+        padding: 0 7%;
+        opacity: 0;
+        transition: all 0.3s ease-out;
+    }
+    .contentArea aside nav ul > li:hover ol li a{
+        font-size: 11px;
+        padding: 15px 7%;
+        opacity: 1;
+        border-bottom: 1px solid #dfe4ee;
+    }
+    /* aside Menu Fin */
+    .contentArea aside fieldset{
+        background-color: #fff;
+        border-radius: 5px;
+    }
+    .contentArea aside fieldset:not(:last-of-type){
+        padding: 60px 0 20px;
+        /* 너비를 상실한 모습을 통해 positior relative가 걸려있는것을 알 수 있음. 밀어내야하므로 60px*/
+        margin-bottom: 30px;
+    }    
+    .contentArea aside fieldset:last-of-type{
+        padding-top: 33px;
+    }
+    .contentArea aside fieldset legend{
+        font-size: 11px;
+        font-weight: 700;
+        color: #343e5c;
+        padding: 0 7% 15px;
+        box-sizing: border-box;
+        border-bottom: 1px solid #f0f2f7;
+        width: 100%;
+        text-transform: uppercase;
+        position: relative;
+        top: 33px;
+        /* 이건 인터넷 검사를 눌러서 실제 높이 27px의 절만반큼 내려오면 된다. 13px -> 시안상 padding은 20ox 이므로 13+20 = 33px이 된다. */
+        /* git참고 */
+    }
+    .contentArea aside fieldset legend a{
+        color: #2754eb;
+        border-bottom: 2px solid #c9d4fa;
+        float: right;
+    }
+    .contentArea aside fieldset label{
+        font-size: 13px;
+        color: #343e5c;
+        font-weight: 500;
+        display: inline-block;
+        box-sizing: border-box;
+        line-height: 20px;
+        padding-left: 25%;
+    }
+    .contentArea aside fieldset span{
+        width: 18%;
+        display: inline-block;
+        text-align: center;
+        font-size: 11px;
+        font-weight: 400;
+        color: #b8bfd3;
+    }
+    .contentArea aside fieldset label:not(:last-of-type),
+    .contentArea aside fieldset span:not(:last-of-type){
+        margin-bottom: 20px;
+    }
+    .contentArea aside fieldset label[for*='ava'],
+    .contentArea aside fieldset label[for*='brand']{
+        width: 80%;
+    }
+    .contentArea aside fieldset input[type='radio']+label:not([for*='dlvr']){
+        background: url('../images/off_radio.png') no-repeat 9.3% center;
+    }
+    .contentArea aside fieldset input[type='radio']:checked+label{
+        background: url('../images/on_radio.png') no-repeat 9.3% center;
+    }
+    .contentArea section{
+        margin-left: 2.56%;
+        width: 74.37%;
+        float: left;
+    }
 
+    
 }
 /* desktop */
