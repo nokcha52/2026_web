@@ -37,6 +37,7 @@ a{
     header > div,
     header + nav .slideNav,
     .contentArea,
+    .tosayArea,
     footer > div{
         max-width: 1170px;
         margin: 0 auto;
