@@ -496,57 +496,144 @@
         4. img 늘어나고 줄어들 수 있게 설정해두기
         5. 글자(dt, dd, del) 정리하기    
     */
-    .tosayArea{
+    .bestArea{
         background-color: #fff;
-    }
-    .tosayArea h2{
+        border-radius: 5px;
+        margin-bottom: 50px;
         text-align: center;
-        line-height: 56px;
+    }
+    .bestArea h2{
+        line-height: 55px;
         font-size: 11px;
+        font-weight: 600;
         color: #343e5c;
         text-transform: uppercase;
-        border-bottom: 2px solid #f0f2f7;
+        letter-spacing: 1px;
+        border-bottom: 1px solid #f0f2f7;
     }
-    .tosayArea ul{
+    .bestArea ul{
         list-style: none;
     }
-    .tosayArea ul::after{
+    .bestArea ul::after{
         content: '';
         display: block;
         clear: both;
     }
-    .tosayArea ul li{
+    .bestArea ul li{
         float: left;
+        width: 25%;
+        padding-bottom: 35px;
+        display: block;
     }
-    .tosayArea ul li:not(:first-child){
-        border-left: 2px solid #f0f2f7;
+    .bestArea ul li:not(:first-child){
+        border-left: 1px solid #f0f2f7;
+        box-sizing: border-box;
     }
-    .tosayArea ul li figure figcaption dl > *{
-        text-align: center;
+    .bestArea ul li figure img{
+        width: 100%;
+        display: block;
     }
-    .tosayArea ul li figure figcaption dl dt{
+    .bestArea ul li figure figcaption dl dt{
         color: #343e5c;
         font-size: 16px;
         font-weight: 600;
-        margin-bottom: 14px;
+        margin-bottom: 10px;
     }
-    .tosayArea ul li figure figcaption dl dd:first-of-type{
-        color: #bbc0cf;
+    .bestArea ul li figure figcaption dl dd{
         font-size: 11px;
-        font-weight: 400;
+        font-weight: 500;
+        color: #a1a8bd;
+        text-transform: uppercase;
         letter-spacing: 1px;
-        margin-bottom: 24px;
+        margin-bottom: 20px;
     }
-    .tosayArea ul li figure figcaption dl dd:last-of-type{
+    .bestArea ul li figure figcaption dl dd:last-of-type{
         margin-bottom: 37px;
         font-size: 14px;
         font-weight: 600;
+        color: #343e5c;
     }
-    .tosayArea ul li figure figcaption dl dd:last-of-type del{
+    .bestArea ul li figure figcaption dl dd:last-of-type del{
         color: #b8bfd3;
-        margin-right: 6.33%;
+        margin-right: 15px;
+        /* 이건 떨어질 일이 없어서 px로 줘도 괜찮 */
     } 
-
+    /* ?bestArea Fin */
+    section.tosayArea{
+        background-color: #fff;
+    }
+    section.tosayArea div{
+        max-width: 970px;
+        padding: 70px 0 85px;
+        margin: 0 auto;
+    }
+    section.tosayArea div h2{
+        font-size: 32px;
+        color: #222328;
+        text-align: center;
+        font-weight: 900;
+        margin-bottom: 15px;
+    }
+    section.tosayArea div > p{
+        font-size: 16px;
+        color: #b9bed1;
+        text-align: center;
+        font-weight: 400;
+        font-style: italic;
+        /* italic을 지원하는 폰트만 가능함. 안그러면 과부화 남 */
+        margin-bottom: 50px;
+    }
+    section.tosayArea div ul::after{
+        content: '';
+        display: block;
+        clear: both;
+    }
+    section.tosayArea div ul li{
+        float: left;
+        display: block;
+        width: 28%;
+    }
+    section.tosayArea div ul li:not(:first-child){
+        margin-left: 8%;
+    }
+    section.tosayArea div ul li figure{
+        margin-bottom: 20px;
+    }
+    
+    section.tosayArea div ul li figure::after{
+        content: '';
+        display: block;
+        clear: both;
+    }
+    section.tosayArea div ul li figure img{
+        float: left;
+        display: block;
+        width: 15%;
+    }
+    section.tosayArea div ul li figure figcaption{
+        float: left;
+        margin-left: 7%;
+        width: 78%;
+        /* 너비가 넓은 곳에 minwidth를 넣으면 구조를 무너뜨려야할때 할 수 있음 */
+    }
+    section.tosayArea div ul li figure dl dt{
+        font-size: 14px;
+        color: #3a405b;
+        font-weight: 500;
+        line-height: 20px;
+        margin-bottom: 5px;
+    }
+    section.tosayArea div ul li figure dl dd{
+        font-size: 14px;
+        font-style: italic;
+        color: #b9bed1;
+    }
+    section.tosayArea div ul li p{
+        font-size: 16px;
+        color: #3a405b;
+        line-height: 24px;
+    }
+    /* tosayArea Fin */
     
 }
 /* desktop */
