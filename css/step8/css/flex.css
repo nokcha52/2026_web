@@ -135,11 +135,67 @@
         baseline: 안의 컨텐츠(글자,이미지..)의 end기준으로 정렬.
     */
 }
-
 .flexContainer.alignItems .flexItem:first-of-type{
     line-height: 50px;
 }
-
 .flexContainer.alignItems .flexItem:nth-of-type(2){
     line-height: 100px;
 }
+.flexContainer.justifySelf{
+    width: 220px;
+    display: grid;
+    background-color: lightgreen;
+}
+.flexContainer.justifySelf .flexItem:first-of-type{
+    justify-self: stretch;
+}
+.flexContainer.justifySelf:hover .flexItem:first-of-type{
+    justify-self: center;
+}
+/* 
+    ? justify-self(자신):
+    * flexItem 중 지정된 item에만 정렬 속성 적용.
+    stretch : 부모 공간 기준으로 자신의 너비를 꽉 채우기
+    flex-start : 부모 공간 기준으로 자신의 위치를 좌측으로 맞추기
+    flex-end : 부모 공간 기준으로 자신의 위치를 우측으로 맞추기
+    center : 부모 공간 기준으로 자신의 위치를 중앙으로 맞추기
+*/
+.flexContainer.alignSelf .flexItem:first-of-type{
+    align-self: center;
+}
+.flexContainer.alignSelf:hover .flexItem:first-of-type{
+    align-self: flex-start;
+}
+.flexContainer.alignSelf .flexItem:nth-of-type(2){
+    line-height: 80px;
+    /* 
+        ? align-self(자신):
+        * flexItem 중 지정된 item에만 정렬 속성 적용.
+        stretch : item 중 가장 높은 대상 기준으로 자신의 너비를 꽉 채우기
+        flex-start : item 중 가장 높은 대상 기준으로 자신의 위치를 상단으로 맞추기
+        flex-end : item 중 가장 높은 대상 기준으로 자신의 위치를 하단으로 맞추기
+        center : item 중 가장 높은 대상 기준으로 자신의 위치를 중앙으로 맞추기
+    */
+}
+.flexContainer.orderItem .flexItem.order1{
+    background-color: lightgreen;
+    color: forestgreen;
+    font-weight: bold;
+    order: 1;
+}
+.flexContainer.orderItem .flexItem.order2{
+    background-color: lightpink;
+    color: deeppink;
+    font-weight: bold;
+    order: 2;
+}
+.flexContainer.orderItem .flexItem.order3{
+    background-color: lightblue;
+    color: midnightblue;
+    font-weight: bold;
+    order: -1;
+}
+/* 
+    ?order:
+    flexContainer의 flexItem을 0(default)을 기본으로 낮은 수(음수가능)일수록 앞으로, 높은 수일수록 뒤로.
+*/
