@@ -86,7 +86,7 @@ function fixtoNumb(){
 // case 6. test에 들어있는 문자를 숫자로 형변환.
 /*
     ?Number
-    * Numver(value); - 정수, 실수 구분 없이 형변환
+    * Number(value); - 정수, 실수 구분 없이 형변환
 
     ? parse
     * 1. parseInt(value); - 정수형변환
@@ -129,3 +129,23 @@ function todo3(){
     var result = test.toString(); // todo
     console.log(typeof(result) + "=" + result); //! string = 100
 }
+
+// todo. 2 문자형을 숫자형으로 변환하여 연산이 가능하게 만들기.
+// todo 2-1 . parse 형변환
+function todo4(){
+    var test = '100.51'
+    var result = parseInt(test) + 150 + parseInt("20"); //todo
+    console.log(typeof(result) + "=" + result); //! number = 270
+}
+function todo5(){
+    var test = '100.51'
+    var result = parseFloat(test) + 150 + parseInt("20"); //todo
+    console.log(typeof(result) + "=" + result); //! number = 270.51
+}
+// todo 2-2. Number 형변환
+function todo6(){
+    var test = '100.51'
+    var result = Number(test) + 150 + Number("20"); //todo
+    console.log(typeof(result) + "=" + result); //! number = 270.51
+}
+
