@@ -154,3 +154,12 @@ function logicalOperator2(){
     var result = (a=='남자')||(b=="웹퍼블리셔");
     console.log("result = " + result);
 }
+// todo. 다음 코드의 문제점을 수정하라
+function compareOperator4(){
+    console.log(30>20 && 20>10);
+    /*
+        ? (30>20)>10 -> true > 10 = 오류
+        ! javaScript -> 암시적형변환.. 자료형 비교가 안되 시 임의로 변환 
+        ? true > 10 -> 1 > 10 -> false.    
+    */
+}

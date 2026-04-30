@@ -7,7 +7,6 @@ function nameOperator(){
 }
 
 // todo.2 다음 숫자가 출력 되도록 연산자를 활용하여 코드를 작성.
-
 function numberOperator(){
     var number = 10;
     console.log(number++);//? - 10
