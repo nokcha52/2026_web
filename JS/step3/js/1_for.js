@@ -145,3 +145,53 @@ function arrayTodo2(){
         document.write(swapNumb[i] + "번째 내용 = " + data[i] + "<br>");
     }
 }
+
+// case 6. 역반복배열
+function reverseFavorFruit(){
+    var fruitArr = ['방토', '딸기', '오렌지' ,'귤','복숭아','레몬'];
+    for(var i = fruitArr.length - 1; i >= 0; i--){
+        document.write(fruitArr[i],"<br>");
+    }
+} //가격순으로 정렬할때 사용함.
+
+// case 7. continue문
+function forContinue(){
+    for(var i = 0; i <= 10; i++){
+        continue; // 비유: 캡아 방패같은 느낌. 계속 튕겨냄. 사용예시는 3의 배수를 제외하고 라는 조건이 있을때
+        document.write(i+"<br>");
+    }
+    document.write("최종 i = " + i + "<br>");
+}
+function continueEx(){
+    var text = '';
+    for(var i = 0; i < 10; i++){
+        if(i == 3){
+            continue;
+        }
+        text = text + i;
+    }
+    console.log(text);
+}
+
+// todo. continue 활용 - 1~10까지 더하되 홀수는 걸러내고 짝수만 더하게 만들기
+function runContinue(){
+    // var numb = '';
+    // for(var i = 0; i < 10; i++){
+    //     if(i%2 == 1){
+    //         continue;
+    //     }
+    //     numb = Number(numb) += i;
+    //     console.log(numb +"<br>")
+    // }
+    var numb = '';
+    for(var i = 0; i < 10; i++){
+        if(i%2 == 1){
+            continue;
+        }
+            numb =+ i ;
+        
+        
+        console.log(numb +"<br>")
+    }
+    
+}
