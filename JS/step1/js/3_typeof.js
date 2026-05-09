@@ -36,7 +36,7 @@ function testTypeof(){
 
 // case 2. 자신의 영어 이름을 engName 변수에 담아 자료형 check.
 function textTypeof(){
-    var engName = "wltn"
+    var engName = "wltn";
     console.log(typeof(engName));
 }
 
@@ -46,7 +46,7 @@ function check1(){
     console.log("추위를 느끼고 있나?" + cold + "(" + typeof(cold) + ")");
 }
 
-// case 4. obj 변쉥 객체를 담을 예정이라 null로 초기화하고 자료형을 check.
+// case 4. obj 변수에 객체를 담을 예정이라 null로 초기화하고 자료형을 check.
 function check2(){
     var obj = null;
     console.log("obj에 담긴 값의 자료 유형은" + typeof(obj) + "입니다.");

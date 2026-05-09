@@ -69,7 +69,8 @@ var userAge = 99;
 function printLog(){
 console.log(userName,userAge);
 }
-//case 1. 콤마로 구분하며 선언 및 초기화하기(가독성 떨어짐)
+
+//case 1. 콤마로 구분하며 선언 및 초기화 하기(가독성 떨어짐)
 var radius = 10, pi = 3.141592625;
 
 //case 2. 콤마로 구분하며 선언
