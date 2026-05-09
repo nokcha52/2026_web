@@ -174,24 +174,16 @@ function continueEx(){
 }
 
 // todo. continue 활용 - 1~10까지 더하되 홀수는 걸러내고 짝수만 더하게 만들기
+
 function runContinue(){
-    // var numb = '';
-    // for(var i = 0; i < 10; i++){
-    //     if(i%2 == 1){
-    //         continue;
-    //     }
-    //     numb = Number(numb) += i;
-    //     console.log(numb +"<br>")
-    // }
-    var numb = '';
-    for(var i = 0; i < 10; i++){
-        if(i%2 == 1){
+    var numb = 0;
+    for(i=1; i < 10; i++){
+        if(i%2 ==1){
             continue;
         }
-            numb =+ i ;
-        
-        
-        console.log(numb +"<br>")
+        numb += i;
+        console.log(numb);
     }
     
+
 }
