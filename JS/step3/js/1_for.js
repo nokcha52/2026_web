@@ -177,13 +177,106 @@ function continueEx(){
 
 function runContinue(){
     var numb = 0;
-    for(i=1; i < 10; i++){
+    for(i=1; i <= 10; i++){
+        //조건문
         if(i%2 ==1){
+            /*
+                i가 홀수일 경우 반복중지 다음 반복 수행, 현재 다음 반복은 없다.
+                (1을 2로 나눈 나머지가 1과 일치할 경우 다음 반복을 수행하라.) 다시 반복문으로
+                (1을 2로 나눈 나머지가 1과 일치할 경우 다음 반복을 수행하라.) 이탈후 output += i; 실행
+                (1을 2로 나눈 나머지가 1과 일치할 경우 다음 반복을 수행하라.) 다시 반복문으로
+                (1을 2로 나눈 나머지가 1과 일치할 경우 다음 반복을 수행하라.) 이탈후 output += i; 실행
+                ....
+                이 조건으로 i값이 10보다 작거나 같을때까지 수행하여 출력하라.          
+            */ 
             continue;
         }
-        numb += i;
+        numb += i; //(2,6,12,20,30)
+        //출력
         console.log(numb);
     }
-    
-
 }
+
+// case 8. break
+function forBreak(){
+    for(var i = 1; i <= 10; i++){
+        break; //만나는 즉시 중단 
+        document.write(i+'<br>');
+    }
+    document.write("최종 i = " + i + "<br>");
+}
+
+function breakEx(){
+    var i = 0; //선언부
+    while(i < 6){ // while은 선언부, 증감부가 분리됨. / 무한반복에 유리
+        if(i == 3){
+            break;
+        }
+        i = i+1; //증감부
+    }
+    console.log(i);
+}
+
+// case 9. break 활용
+function runBreak(){ //무한 루프를 원하는 타이밍에 끊을 수 있어야한다
+    for(var i = 0; true; i++){ //while 무한루프 for 조건이 있을 경우 사용
+        alert(i+"번째 반복문");
+        if(!confirm('계속할거냐?')){
+            break;
+        }
+    }
+}
+
+/* 
+    todo. 배열 값을 변화시키면 자동으로 반응하는 경고창.
+    todo. console에 "n번째 반복문"이라는 메시지가 떠야하고
+    todo. n번째라고 하는 건 배열의 갯수로 규정된다.
+    todo. length를 사용하는 것이 아니라 무한루프 상태에서 (배열의 갯수만큼만 반복이 실행=조건)된 이후에 break.
+    todo. 1 "지정된 배열값: 6개. 출력 완료" 라는 출력완료 메세지가 document에 발생
+*/
+function runBreak2(){
+    var swapNumb = ['첫','두','세','네','다섯','여섯'];
+    for(var i = 0; true; i++){  
+        console.log(swapNumb[i]+ "번째 반복문");            
+        if(i== swapNumb.length-1){
+            break;
+        }      
+    }
+    document.write("지정된 배열값: " + swapNumb.length +"개. 출력완료" + "<br>");  
+}
+
+// ! 다중 for
+// case 1. 반절 피라미드
+function halfPyramid(){
+    var star = "";
+    for(var i = 1; i <= 10; i++){
+        for(var j =0; j < i; j++){
+            star += "*";
+        }
+        star += "<br>";
+    }
+    document.write(star);
+}
+
+// todo. 역반절피라미드
+function reverseHalfPyramid(){
+    
+}
+
+
+// todo. 완성형 피라미드
+//  &nbsp; 홀수별 반복, <br>반복
+
+function pyramid(){
+    var star = "";
+    for(var i = 1; i <= 10; i++){
+            for(var j = 10; j >= i; j--){
+                star += "&nbsp";
+            }for(var k = 1; k <= 2*j+1; k++){
+            star += "*";
+        }
+        star += "<br>";
+    }    
+    document.write(star);
+}
+// 2n-1 => 19 1개
