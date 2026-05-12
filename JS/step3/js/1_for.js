@@ -260,7 +260,14 @@ function halfPyramid(){
 
 // todo. 역반절피라미드
 function reverseHalfPyramid(){
-    
+    var star = "";
+    for(var i= 0; i <= 10; i++){
+        for(var j = 10; j > i; j++){
+            star += "*";
+        }
+        star += "<br>"
+    }
+    document.write(star);
 }
 
 
