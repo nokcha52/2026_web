@@ -261,11 +261,11 @@ function halfPyramid(){
 // todo. 역반절피라미드
 function reverseHalfPyramid(){
     var star = "";
-    for(var i= 0; i <= 10; i++){
-        for(var j = 10; j > i; j++){
+    for(var i = 0; i <= 10; i++){
+        for(var j = 10; j > i; j--){
             star += "*";
         }
-        star += "<br>"
+        star += "<br>";
     }
     document.write(star);
 }
@@ -276,10 +276,10 @@ function reverseHalfPyramid(){
 
 function pyramid(){
     var star = "";
-    for(var i = 1; i <= 10; i++){
-            for(var j = 10; j >= i; j--){
-                star += "&nbsp";
-            }for(var k = 1; k <= 2*j+1; k++){
+    for(var i = 0; i <= 10; i++){
+            for(var j = 10; j > i; j--){
+                star += "&nbsp;";
+            }for(var k = 0; k < 2*j+1; k++){
             star += "*";
         }
         star += "<br>";
