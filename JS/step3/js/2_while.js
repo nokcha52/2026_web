@@ -83,3 +83,18 @@ function sumNumb(){
 
     }
 }
+
+function sumNumb2(){
+    var i = 1;
+    var result = 0;
+    while(true){
+        var numb = prompt(i+"번째 입력");
+        if(numb == "end"){
+            break;
+        }else{
+            result += Number(numb);
+            document.write("현재까지의 총합 : " + result + "<br>");
+        }        
+        i++;
+    }
+}
