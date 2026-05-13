@@ -261,11 +261,11 @@ function halfPyramid(){
 // todo. 역반절피라미드
 function reverseHalfPyramid(){
     var star = "";
-    for(var i = 0; i <= 10; i++){
-        for(var j = 10; j > i; j--){
-            star += "*";
+    for(var i = 10; i >= 1; i--){ //? 1. ifor = 10~1 까지 수행
+        for(var j = 0; j < i; j++){ // 2. jfor = j가 i보다 작을때까지 반복수행 10,9,8,7,6...
+            star += "*"; //?변수 star에 반복생성된만큼 *을 넣음
         }
-        star += "<br>";
+        star += "<br>"; //? ifor 만큼 <br>을 변수 star에 넣음.
     }
     document.write(star);
 }
@@ -276,14 +276,40 @@ function reverseHalfPyramid(){
 
 function pyramid(){
     var star = "";
-    for(var i = 0; i <= 10; i++){
-            for(var j = 10; j > i; j--){
-                star += "&nbsp;";
-            }for(var k = 0; k < 2*j+1; k++){
-            star += "*";
+    for(var i = 1; i <= 10; i++){ //? 1. ifor = 1~10 까지 수행
+        for(var j = 10; j >= i; j--){ // 2. jfor = 10~1까지 수행
+            star += "&nbsp;"; //? 공백이 10개부터 1개까지 들어감.
+        }
+        for(var k = 0; k < 2*i-1; k++){ // ? 3. sfor = i가 들어올때마다 홀수화됨(1,3,5,7,9,11,13,15,17,19)
+            star += "*"; //? 홀수화된 k의 수치만큼 반복해서 *이 들어감
         }
         star += "<br>";
     }    
-    document.write(star);
+    document.write(star); // ? ifor만큼 <br>을 변수 star에 넣음
 }
 // 2n-1 => 19 1개
+// 잘못된 루프
+function pyramidLoop4(){
+    for(var i = 0; i < 10; i++){
+        for(var j=9; j > i; j--){
+            document.write("&nbsp;")
+        }
+        for(var j =0; j <= i; j++){
+            document.write("*");
+        }
+        for(var j =1; j <= i; j++){
+            document.write("*");
+        }
+        document.write("<br>");
+    }
+}
+// 루프를 줄인다면~
+function pyramidCustom(n){
+    for(var i = 1; i <= n; i++){
+        var s = "";
+        for(var j = 1; j<=(2*n-1); j++){
+            (j >= n+1 -i && j<=n-1+i)? s+="*":s+= "";
+        }
+        console.log(s+"<br>");
+    }
+}
