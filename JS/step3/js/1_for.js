@@ -313,3 +313,13 @@ function pyramidCustom(n){
         console.log(s+"<br>");
     }
 }
+
+// todo. 구구단 숫자를 입력받아 무한으로 출력하는 for문
+// ? 1. 숫자 입력받을 prompt 출력
+// ? 2. 숫자를 입력받으면 해당 구구단을 출력.
+function gugudan(){
+    var guguNumb = prompt("숫자를 입력하세요");
+    for(var i =1; i <= 9; i++){
+        document.write(guguNumb + " x " + i + " = " + guguNumb*i + "<br>");
+    }
+}
