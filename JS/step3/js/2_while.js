@@ -76,25 +76,34 @@ function sumNumb(){
     var i = 1; // ? 카운트 변수
     var result = 0; // ? 매턴마다 결과담기
     while(true){
-        var numb = prompt(i+ "번째 입력");
-
+        var numb = prompt(i+ "번째 입력"); //? 무한루프로 입력받기
+        if(numb=="end"){
+            alert("입력이 종료되었습니다.");
+            break; // ?루프 중단 및 종료 alert 출력
+        }else if(numb.trim === "" || isNaN(Number(numb))){ 
+            // ? trim() = 공백정리함수 - 앞,뒤 공백 싹 제거
+            // ? isNaN = 대상이 숫자가 아니면 true, 숫자면 false를 반환하는 함수
+            // NaN : not a number
+            alert("입력된 값이 잘못되었습니다. 다시 입력하세요.");
+            continue;            
+        }
         result += parseInt(numb);
+        document.write("현재까지의 총합 : " + result + "<br>"); //? 저장된 result 값을 출력.
         i++;
 
     }
 }
-
-function sumNumb2(){
-    var i = 1;
-    var result = 0;
-    while(true){
-        var numb = prompt(i+"번째 입력");
-        if(numb == "end"){
-            break;
-        }else{
-            result += Number(numb);
-            document.write("현재까지의 총합 : " + result + "<br>");
-        }        
-        i++;
-    }
-}
+// function sumNumb2(){
+//     var i = 1;
+//     var result = 0;
+//     while(true){
+//         var numb = prompt(i + "번째 입력");
+//         if(numb == 'end'){
+//             break;
+//         }else{
+//             result += Number(numb);
+//             document.write("현재까지의 총합 : " + result + "<br>"); //? 저장된 result 값을 출력.
+//         }
+//         i++;
+//     }
+// }
