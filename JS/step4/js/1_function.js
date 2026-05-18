@@ -77,9 +77,9 @@ function f(x){
    return(x*x);
 }
 /*
-console.log(f(9));
-document.write(f(9));
-alert(f(9));
+    console.log(f(9));
+    document.write(f(9));
+    alert(f(9));
 */
 
 // case 6. arguments + return 혼합 
@@ -93,8 +93,134 @@ function sumAllEx(){
 }
 
 // case 7. returnValue를 변수에 저장하고 전달하기
-function sumReturn1(num1,num2){
-    var result = num1 + num2;
+function sumReturn1(num1,num2){ //고정인자 2개
+    var result = num1 + num2; // result에 고정인자 더하기
+    return result; //호출부 리턴
+}
+var value = sumReturn1(13,26); //변수에 담김. value를 당기면 39를 당기는거랑 같다
+// 함수실행 자체가 변수내에서 이루어졌다. -> 해당 함수는 리턴을 가지고 있다. -> 변수내로 함수실행 결과가 나온다.
+/*
+console.log(value);
+alert(value);
+document.write(value);
+*/
+
+// case 8. 무한루프르 돌며 숫자를 입력받고 입력받은 수의 합을 출력하는 함수
+// !단, 입력값이 0이면 즉시 실행 중지.
+function infiniteSum(){
+    var sum = 0;
+    var count = 1;
+    while(true){
+        var value = parseInt(window.prompt('숫자만 입력해라.'));
+        if(value ==0){ //0을 입력하면 종료
+            document.write('종료');
+            return;
+            // return; -> 함수부 종료. 
+            // break; -> 해당로직(loop)을 종료 = 반복문 밖의 구문이 실행.
+        }
+        sum += value;
+        document.write(count + "." + sum + "<br>");
+        count++;
+    }
+    document.write(": 총"+count+"번 실행함"); //break대신 return으로 바꾸게 되면 이 부분이 안나오게 됨. return은 해당 함수 자체를 종료시킴(break와 차이점). 
+}
+
+// todo. 기존 구구단 형태를 "x"단 출력 방식의 함수로 만들어보기
+function printGugudan(numb){
+    var data = '';// 1. 결과를 담을 변수.
+    for(var i = 2; i <= numb; i++){
+    // 2. 대기어 반복 -> ? <br>
+        data += i + "단 출력" + "<br>";
+        for(var m = 1; m <= numb; m++){
+        // 3. 소기어 반복 -> 연산반복
+            data += i + "x" + m + "=" + (i*m) +"<br>";
+        }
+        data += '<br>';
+    }
+    return data;
+    // 5. 실행된위치로 결과반환
+}
+// document.write(printGugudan(15));
+
+// case 9. 다음 실행 구문으로 전달받은 매개변수를 계산하여 결과로 출력하는 함수
+/*
+    //* 실행구문
+    document.write("1 결과 =" + calculator("+", 20, 10) + "<br>");
+    document.write("2 결과 =" + calculator("-", 20, 10) + "<br>");
+    document.write("3 결과 =" + calculator("*", 20, 10) + "<br>");
+    document.write("4 결과 =" + calculator("/", 20, 10) + "<br>");
+    document.write("5 결과 =" + calculator("%", 20, 10) + "<br>");
+    //* 결과 
+    결과 = 30
+    결과 = 10
+    결과 = 200
+    결과 = 2
+    결과 = 잘못된 연산자 입니다.
+*/
+function calculator(op,numb1,numb2){
+    var result = '';
+    switch(op){
+        case "+":
+            result = numb1 + numb2;
+            break;
+        case "-":
+            result = numb1 - numb2;
+            break;
+        case "*":
+            result = numb1 * numb2;
+            break;
+        case "/":
+            result = numb1 / numb2;
+            break;
+        default:
+            result ="잘못된 연산자입니다.";
+            break;
+    }
     return result;
 }
-var value = sumReturn1(13,26);
+// todo. 위 예제에 추가로 사칙연산 부분을 함수로 변환하여 보다 편하게 사용할 수 있게 만들기.
+/* 실행구문
+document.write(calculator2("+", 20, 10) + "<br>"); -> 위 1번예제와 동일하게 작동됨.
+document.write(add(20, 10) + "<br>"); ->이하 나머지는 전용 연산자 함수
+document.write(sub(20, 10) + "<br>");
+document.write(mul(20, 10) + "<br>");
+document.write(div(20, 10) + "<br>");
+    //* 결과 
+    결과 = 30 -> 위 1번예제와 동일하게 작동된 결과
+    결과 = 30 ->이하 나머지는 전용 연산자 함수 결과
+    결과 = 10
+    결과 = 200
+    결과 = 2
+
+    todo. 큰 함수= calculator2가 작은함수들 add,sub,mul,div를 가져다 사용하게 만들기.
+*/
+function calculator2(op,numb1,numb2){
+    var result = '';
+    switch(){
+        
+    }
+    // 자신이 실행될 값을 받아야함.
+    
+    return result;
+}
+function add(numb1,numb2){
+    result = (numb1 + numb2);     
+    return;
+}
+function sub(numb1,numb2){
+    result = (numb1 - numb2);     
+    return;
+}
+function mul(numb1,numb2){
+    result = (numb1 * numb2);     
+    return;
+}
+function div(numb1,numb2){
+        result = (numb1 / numb2);     
+
+}
+// document.write(calculator2("+", 20, 10) + "<br>");
+// document.write(add(20, 10) + "<br>"); 
+// document.write(sub(20, 10) + "<br>");
+// document.write(mul(20, 10) + "<br>");
+// document.write(div(20, 10) + "<br>");
