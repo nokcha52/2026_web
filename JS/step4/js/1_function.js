@@ -195,42 +195,43 @@ document.write(div(20, 10) + "<br>");
     todo. 큰 함수= calculator2가 작은함수들 add,sub,mul,div를 가져다 사용하게 만들기.
 */
 function calculator2(op,numb1,numb2){
-    var returnWill = '';
+    var result = '';
     switch(op){
         case "+":
-            returnWill = add(numb1,numb2);
+            result = add(numb1,numb2);
             break;
         case "-":
-            returnWill = sub(numb1,numb2);
+            result = sub(numb1,numb2);
             break;
         case "*":
-            returnWill = mul(numb1,numb2);
+            result = mul(numb1,numb2);
             break;
         case "/":
-            returnWill = div(numb1,numb2);
+            result = div(numb1,numb2);
             break;
         default:
-            returnWill ="잘못된 연산자입니다.";
+            result ="잘못된 연산자입니다.";
             break;
     }
-    return returnWill;
+    return result;
     // 자신이 실행될 값을 받아야함.    
 }
 function add(numb1,numb2){
-    result = (numb1 + numb2);     
-    return result;
+    var addResult = numb1 + numb2;     
+    return addResult;
+    // return numb1 + numb2; -> 이것도 가능한데 값을 저장할 수 없어서 비추
 }
 function sub(numb1,numb2){
-    result = (numb1 - numb2);     
-    return result;
+    var subResult = numb1 - numb2;     
+    return subResult;
 }
 function mul(numb1,numb2){
-    result = (numb1 * numb2);     
-    return result;
+    var mulResult = numb1 * numb2;     
+    return mulResult;
 }
 function div(numb1,numb2){
-    result = (numb1 / numb2);     
-    return result;
+    var divResult = numb1 / numb2;     
+    return divResult;
 }
 document.write(calculator2("+", 20, 10) + "<br>");
 document.write(add(20, 10) + "<br>"); 
