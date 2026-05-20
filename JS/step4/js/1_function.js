@@ -307,12 +307,18 @@ function callFunctionTenTimes(otherFunction){
 // })
 
 // case 14. returnValue로 함수 사용하기
-function createHello(){
-    function hello(user){
+function createHello(){ 
+    function hello(user){ //? user 매개변수 생성하는 hello함수 생성
         document.write(user +"welcome!");
     }
-    return hello;
+    return hello; //? createHello가 호출되는 곳으로 생성된 hello함수 return
 }
-var result = createHello();
-result("mark");
+var result = createHello(); //? createHello 호출부기 때문에 hello함수가 들어옴
+result("mark"); //? result = hello함수와 같음
 // todo. 왜 결과가 MarkWelcome!이 나오는지 주석으로 정리해오기
+// 1. createHello함수 실행 -> hello함수가 제작됨
+// 2. return이 hello 함수를 지님.
+// 3. createHello 실행된 위치 = hello함수가 가는 곳.
+// 4. result변수는 곧 hello함수가 됨. 
+// 5. hello함수에는 user라는 매개변수 존재.
+// 6. result변수에도 user라는 매개변수 존재.
