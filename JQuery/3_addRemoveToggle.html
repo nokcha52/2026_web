@@ -48,6 +48,37 @@
             z-index: 1;
             display: block;
         }
+        /* case 2 */
+        .tabMenu{
+            display: flex;
+            flex-flow: row nowrap;
+            padding: 0;
+            list-style: none;
+        }
+        .tabMenu li{
+            width: 33.33%;
+            padding: 0;
+            text-align: center;
+            background-color: #000;
+            color: #fff;
+            border: 1px solid #000;
+            /* border를 넣으면 6픽셀 넘치므로 박스사이징 해줘야함. */
+            box-sizing: border-box;
+            cursor: pointer;
+        }
+        .tabMenu li.activated{
+            background-color: #fff;
+            color: #000;
+        }
+        .tabPage{
+            border: 1px solid #000;
+            padding: 20px;
+            margin-bottom: 50px;
+            display: none;
+        }
+        .tabPage.activated{
+            display: block;
+        }
     </style>
 </head>
 <body>
@@ -67,5 +98,15 @@
             <span class="material-icons toggleVisible">visibility_off</span>
         </form>
     </div>
+    <!-- case 2. tabPage -->
+    <ul class="tabMenu">
+        <li data-tabNumb="tab1" class="activated">tab1</li>
+        <!-- 사용자임의 속성: 'data-'' -->
+        <li data-tabNumb="tab2">tab2</li>
+        <li data-tabNumb="tab3">tab3</li>
+    </ul>
+    <div id="tab1" class="tabPage activated" >tabPage1</div>
+    <div id="tab2" class="tabPage">tabPage2</div>
+    <div id="tab3" class="tabPage">tabPage3</div>
 </body>
 </html>

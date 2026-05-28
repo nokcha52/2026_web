@@ -1,6 +1,7 @@
 $(document).ready(function(){
     toggleCheck();
     toggleTodo();
+    tabUI();
 });
 function toggleCheck(){
     var $checkTarget = $(".material-icons.checkIco");// 최대한 자세하게 서술하는게 정확해서
@@ -28,10 +29,20 @@ function toggleTodo(){
         pwStatus = !pwStatus;
         if(pwStatus == true){
             $pwInput.text("visibility");
-            $pwInput.attr("type","text");
+            $pwInput.attr("type","text"); // 이걸 강제로 바꾸면 text 타입으로 날라가게 된다. 그러면 보안상 문제가 된다. 그렇기에 나중에 로그인 버튼을 눌렀을때 password 타입으로 바꿔야한다.
         }else{
             $pwInput.text("visibility_off");
             $pwInput.attr("type","password");
         }
+    });
+}
+// case 2.
+function tabUI(){
+    var $tabBtn = $(".tabMenu li");
+    var $tabPage = $(".tabPage");
+    // 이전값을 유지하려면 var active = null; -> 클로셔함수
+    $tabBtn.click(function(){
+        var activeTab = "#"+$(this).attr("data-tabNumb");
+        console.log(activeTab);
     });
 }
