@@ -1,5 +1,6 @@
 $(document).ready(function(){
     imgAlignHori();
+    imgAlignMix()
 });
 // case 1. x축 정렬
 function imgAlignHori(){
@@ -26,15 +27,17 @@ function imgAlignMix(){
     $(".alignMix").click(function(){
         var imgLength = img.length;
         var imgWidth = img.width();
-        var imgXpos = img.attr("src","x:");
-        var imgHeigt = img.imgHeigt();
+        var imgHeigt = img.height();
         for(var i=0;i<imgLength;i++){
-            var calX = ;
             var image = img.eq(i);
-            xpos = calX*imgWidth;
-            for(var j=0; j<imgHeigt; j++){
-
-            }
+            xpos = (i%3)*imgWidth;
+            ypos = parseInt(i/3)*imgWidth;
+            image.css("left",xpos);
+            image.css("top",ypos);
         }
     })
+    $(".resetMix").click(function(){
+        img.css("left",0);
+        img.css("top",0);
+    });
 }
