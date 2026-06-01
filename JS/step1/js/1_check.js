@@ -1,5 +1,5 @@
 function runAlert(){
-    alert("안녕?"); // libFunction - 라이브러리함수 = 내가 만든 함수가 아님. 원 있는 것.
+    alert("안녕?"); // libFunction - 라이브러리함수 = 내가 만든 함수가 아님. 원래 있는 것.
 }
 function runWrite(){
     document.write('hi');
