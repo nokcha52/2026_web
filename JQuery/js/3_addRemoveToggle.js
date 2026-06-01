@@ -2,6 +2,7 @@ $(document).ready(function(){
     toggleCheck();
     toggleTodo();
     tabUI();
+    accControl(".accComponent li h3");
 });
 function toggleCheck(){
     var $checkTarget = $(".material-icons.checkIco");// 최대한 자세하게 서술하는게 정확해서
@@ -43,6 +44,17 @@ function tabUI(){
     // 이전값을 유지하려면 var active = null; -> 클로셔함수
     $tabBtn.click(function(){
         var activeTab = "#"+$(this).attr("data-tabNumb");
-        console.log(activeTab);
+        // console.log(activeTab);
+        // ?this - 이벤트가 일어난 당사자
+        $(".tabMenu li").removeClass("activated"); // ?removeClass - 해당 클래스 제거
+        $(this).addClass("activated"); // ?addClass - 해당클래스 추가. 여기선 저 이름 자체를 넣는거기때문에 .을 찍어주면 안됨
+        $(".tabPage").removeClass("activated");
+        $(activeTab).addClass("activated");
+    });
+}
+// case.3
+function accControl(target){
+    $(target).click(function(){
+        $(this).toggleClass("active"); //? toggleClass - 해당클래스를 넣었다 뺐다. (toggle script와 동일)
     });
 }
