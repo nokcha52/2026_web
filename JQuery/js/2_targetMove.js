@@ -89,7 +89,7 @@ function keyControl(){
             currentXpos = 0;
         }        
         if(currentXpos > 380){
-            currentYpos = 380;
+            currentXpos = 380;
         }
         if(currentYpos < 0){
             currentYpos = 0;
