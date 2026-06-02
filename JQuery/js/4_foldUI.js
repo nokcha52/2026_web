@@ -1,6 +1,6 @@
 $(document).ready(function(){
     imgAlignHori();
-    imgAlignMix()
+    imgAlignMix(6);
 });
 // case 1. x축 정렬
 function imgAlignHori(){
@@ -19,8 +19,8 @@ function imgAlignHori(){
         img.css("left",0);
     });
 }
-// todo. x,y축으로 3열 배치
-function imgAlignMix(){
+// todo. x,y축으로 3열 배치 + 매개변수 형태로 변환(매개변수를 통해 원하는 배치로 바꿀 수 있다.)
+function imgAlignMix(count){
     var img = $(".imgContainerMix img");
     var xpos = 0;
     var ypos = 0;
@@ -30,8 +30,8 @@ function imgAlignMix(){
         var imgHeigt = img.height();
         for(var i=0;i<imgLength;i++){
             var image = img.eq(i);
-            xpos = (i%3)*imgWidth;
-            ypos = parseInt(i/3)*imgWidth;
+            xpos = (i%count)*imgWidth;
+            ypos = parseInt(i/count)*imgWidth;
             image.css("left",xpos);
             image.css("top",ypos);
         }
