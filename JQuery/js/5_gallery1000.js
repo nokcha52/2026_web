@@ -32,6 +32,7 @@ function gallery2(count, imgWidth, imgHeight){
 */
 
 // 2번째 풀이
+/*
 $(document).ready(function(){
     $(".1way").click(function(){gallery2(1)});
     $(".2way").click(function(){gallery2(2)});
@@ -63,4 +64,35 @@ function gallery2(count){
             "height" : imgHeight
         })
     }    
+}
+*/
+
+// 3번째 풀이
+$(document).ready(function(){
+    gallery();
+});
+function gallery(){
+    var currentWay,xpso,ypos;
+    var $images = $("#imgContainer img");
+    var $imgLength = $images.length;
+    var containerW = $("#imgContainer").width();
+    var imgSize = $images.width();
+    $("[class$='way']").click(function(){
+        currentWay = parseInt($(this).attr("class").replace("way","")); //replace는 이렇게 쓰는게 아니지만 way를 찾아서 빈칸으로 비워지면 된다. 
+        // console.log("현재 가져온 값은" + typeof(currentWay) + "자료형의" + currentWay +"다");  -> 자료형을 점검해야한다.
+        for(var i = 0; i < $imgLength; i++){
+            // todo
+            var $image = $images.eq(i);
+            imgSize = containerW / currentWay;
+            xpos = (i % currentWay) * imgSize;
+            ypos = parseInt(i / currentWay) * imgSize;
+
+            $image.css({
+                'left' : xpos,
+                'top' : ypos,
+                'width' : imgSize,
+                'height' : imgSize
+            })
+        }
+    });
 }
