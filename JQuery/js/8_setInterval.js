@@ -18,7 +18,7 @@ function initEvent(){
 }
 function moveStart(){
     if(timerID == 0){
-        timerID = setInterval(moveCircle,1);
+        timerID = setInterval(moveCircle,1); // 변수에 setinterval 넣는게 중요 포인트다
         // ? setInterval([function],[intervalSpeed])
     }
 }
