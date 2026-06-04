@@ -28,12 +28,14 @@ function moveCircle(){
     xpos += runStep;
     $circle.css("left",xpos);
     //todo. 사각형 프레임 안에 원이 가둬져서 반복운동하게 만들기.
-    railWidth = ($("#rail").width() - $circle.width());
     if(xpos > railWidth || xpos < 0){
         runStep *= -1;
     }
 }
 function moveStop(){
     clearInterval(timerID); // ? setInterval kill -> parameter 값으로 전달해야함. 이미 돌고 있는 함수를 가져올 순 없음. (위에서 가져오는건 함수가 돌고 있지 않으므로) 모순이 생김. 이래서 변수에 담으면 무조건 담게 되므로 timerID안에 담겨있음.
-    timerID = 0; // 0으로 선언해야 setinterval이 다시 돌 수 있게 되는것이다. 우헝 어려워
+    timerID = 0; 
+    // 만약 위에서 clearInterval(timerID)를 누르게 되면, timerID =  setInterval(); 이게 되므로 func moveStart()에서 if문이 돌지 않게 된다(timerID가 0이 아니게 되므로). 그러므로 시작 버튼을 누르게 되면 이 함수는 작동하지 않게 된다.
+    // 그래서 timerID = 0으로 만드는 작업이 필요하다.
+    // 0으로 선언해야 setinterval이 다시 돌 수 있게 되는것이다. 우헝 어려워
 }
