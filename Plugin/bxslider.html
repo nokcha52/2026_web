@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bxslider</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/jquery.bxslider.js"></script>
+    <script src="vendor/jquery.fitvids.js"></script>
+    <script src="js/customize.bxslider.js"></script>
+    <link rel="stylesheet" href="css/import.css">
+</head>
+<body>
+    <!-- 
+        plugin: 콘센트에 꼽는 코드 
+         = 각 환경마다 존재함(ex> JQeury plugin. wordpress plugin)
+         = 환경을 준수하면서 사용해야함. (jquery plugin -> react 에 호환 불가)
+         = 내가 만들 수 없거나 만들 시간이 부족한 경우.
+         = 남이 만들어 놓은 것을 사용하는 개념.
+         = 오래된 환경일수록 플러그인 종류가 다양하고 많음.(제이쿼리는 15년 정도 됨.)
+         사이트 : bxslider
+    -->
+     <!-- vendor : 끌어쓰는 작은 plugin을 의미 / 직접 만든건 js폴더에 넣기 때문/ 동영상의 비율은 임의로 바꿀 수 없다 vendor/fitvids가 이걸 가능하게 해주는 파일이다. -->
+      <ul class="slider">
+        <li><img src="images/wallpaper1.jpg" alt="high quality Wallpaper"></li>
+        <li><img src="images/wallpaper2.jpg" alt="high quality Wallpaper"></li>
+        <li><img src="images/wallpaper3.jpg" alt="high quality Wallpaper"></li>
+        <li><img src="images/wallpaper4.jpg" alt="high quality Wallpaper"></li>
+    </ul>
+</body>
+</html>

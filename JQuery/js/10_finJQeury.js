@@ -69,6 +69,7 @@ function displayFishPosition(){
     }
     $info.html(info);
     console.log("6. 물고기 위치 표시 정상")
+    // 내가 풀은것
     // for(var i = 0; i < $fishList.length; i++){
     //     var $fish = $fishList.eq(i);
     //     var $fishPos = $fish.position().left;        
@@ -76,5 +77,36 @@ function displayFishPosition(){
     // }    
 }
 function checkGoalFish(){
-
+    var winnerList = []; //배열 안에 인덱스로 저장
+    for(var i = 0; i < $fishList.length; i++){
+        var fishCurrentPosition = $fishList.eq(i).position().left;
+        if(fishCurrentPosition >= goalLine){
+            winnerList.push({
+                index: (i), position: fishCurrentPosition //0번 물고기면 0번방이라고 저장이됨.
+            }); //배열에 저장함수.
+            console.log("7. 데이터 저장 성공");
+            console.log(winnerList);
+        }
+    }
+    if(winnerList.length > 0){ //배열 안에 한개라도 들어가게 되었을때
+        winnerList.sort(function(a,b){  //compare func. 모든 경우의 수를 정렬함 / 이거로 뭐 판매량 순 글자순 이런것들을 만들 수 있다.
+            console.log(b.position - a.position);
+            return b.position - a.position; //내림차순 정렬법.
+            /*
+                ? position 값 기준 내림차순 정렬.
+                오름차순 -> 진행될수록 점점 값이 커지거나(1,2,3,4....) 정순(a,b,c,d)으로 나타나는 것.
+                내림차순 -> 진행될수록 점점 값이 작아지거나(...4,3,2,1) 역순(..d,c,b,a)로 나타나는 것.
+            */ 
+        });
+        endGame();
+        console.log("8. 우승 물고기 선별 ")
+        alert("우승! " + winnerList[0].index + "번 물고기"); // 제일 큰 값이 0번방에 들어오게 되어서 0번을 불러온것이다.
+    }
 }
+// ? 결승선 도달 감지 함수
+function endGame(){
+    clearInterval(timerID);
+    timerID = -1; // 0을 많이 써야해서 -1로 바꿔뒀었음.
+    console.log("9. 게임 종료")
+}
+// ? 게임 종료 함수
